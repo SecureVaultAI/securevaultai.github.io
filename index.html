@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecureVault AI — Your Digital Privacy Guardian</title>
+<meta name="description" content="A 100% offline, AES-256 encrypted vault, password manager and decoy vault for Android. No cloud. No servers. Nothing ever leaves your device.">
+
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Open Graph -->
+<meta property="og:title" content="SecureVault AI — Your Digital Privacy Guardian">
+<meta property="og:description" content="100% offline vault, password manager & decoy vault. AES-256. No cloud, ever.">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:type" content="website">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="SecureVault AI">
+      <span>SecureVault AI<small>PRIVACY&nbsp;GUARDIAN</small></span>
+    </a>
+    <nav class="primary-nav">
+      <a class="nav-link" href="#compartments">Features</a>
+      <a class="nav-link" href="#cases">Why it matters</a>
+      <a class="nav-link" href="#specs">Privacy</a>
+      <a class="nav-link" href="privacy.html">Policy</a>
+    </nav>
+    <a class="btn btn-brass" href="#join">Join closed testing</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" style="border-bottom:1px solid var(--line-soft); padding-top:88px;">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">100% Offline &middot; AES&#8209;256 &middot; No Cloud</span>
+        <h1>Your privacy,<br><em>locked in steel.</em></h1>
+        <p class="hero-sub">SecureVault AI is an encrypted vault, password manager and decoy vault that never touches the internet. Your documents, passwords and vault contents are encrypted and decrypted only on your device — nothing is ever uploaded, not even to us.</p>
+        <div class="hero-ctas">
+          <a href="#join" class="btn btn-brass">Join closed testing →</a>
+          <a href="privacy.html" class="btn btn-ghost">Read the privacy policy</a>
+        </div>
+        <div class="spec-tags">
+          <span class="spec-tag"><span class="dot"></span>AES-256-CBC local encryption</span>
+          <span class="spec-tag"><span class="dot"></span>Biometric / PIN lock</span>
+          <span class="spec-tag"><span class="dot"></span>Zero network permissions used for vault data</span>
+        </div>
+      </div>
+
+      <!-- Signature element: rotating vault dial -->
+      <div class="dial-stage" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <!-- blueprint crosshair guides -->
+          <line x1="200" y1="10" x2="200" y2="390" stroke="#2c384d" stroke-width="1"/>
+          <line x1="10" y1="200" x2="390" y2="200" stroke="#2c384d" stroke-width="1"/>
+          <rect x="26" y="26" width="348" height="348" fill="none" stroke="#212a3a" stroke-width="1"/>
+          <path d="M26 46 V26 H46" fill="none" stroke="#c9a35f" stroke-width="1.4" opacity="0.6"/>
+          <path d="M374 46 V26 H354" fill="none" stroke="#c9a35f" stroke-width="1.4" opacity="0.6"/>
+          <path d="M26 354 V374 H46" fill="none" stroke="#c9a35f" stroke-width="1.4" opacity="0.6"/>
+          <path d="M374 354 V374 H354" fill="none" stroke="#c9a35f" stroke-width="1.4" opacity="0.6"/>
+
+          <!-- outer tick ring (slow rotation) -->
+          <g class="dial-ring-ticks">
+            <circle cx="200" cy="200" r="160" fill="none" stroke="#2c384d" stroke-width="1.5"/>
+            <g stroke="#6fa3d8" stroke-width="1.5">
+              <!-- 36 ticks generated -->
+              <g id="ticks"></g>
+            </g>
+          </g>
+
+          <!-- number ring -->
+          <circle cx="200" cy="200" r="132" fill="none" stroke="#212a3a" stroke-width="1"/>
+
+          <!-- rotating brass handle -->
+          <g class="dial-ring-outer">
+            <circle cx="200" cy="200" r="92" fill="#1a2333" stroke="#c9a35f" stroke-width="2"/>
+            <g stroke="#c9a35f" stroke-width="2.5" stroke-linecap="round">
+              <line x1="200" y1="200" x2="200" y2="118"/>
+              <line x1="200" y1="200" x2="270" y2="242"/>
+              <line x1="200" y1="200" x2="130" y2="242"/>
+            </g>
+            <circle cx="200" cy="118" r="5" fill="#e6c688"/>
+            <circle cx="270" cy="242" r="5" fill="#e6c688"/>
+            <circle cx="130" cy="242" r="5" fill="#e6c688"/>
+          </g>
+
+          <!-- static center lock -->
+          <circle cx="200" cy="200" r="34" fill="#121927" stroke="#eef1f6" stroke-width="1.5"/>
+          <path d="M188 198 v-10 a12 12 0 0 1 24 0 v10" fill="none" stroke="#eef1f6" stroke-width="2.5" stroke-linecap="round"/>
+          <rect x="183" y="198" width="34" height="22" rx="3" fill="#eef1f6"/>
+
+          <text x="200" y="46" text-anchor="middle" class="dial-label">Ø PRIVACY LOCK — MODEL SV-AI</text>
+          <text x="200" y="362" text-anchor="middle" class="dial-label">SERIAL: 100% LOCAL · NO SYNC</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE LOG ============ -->
+  <section id="cases">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Case log</span>
+        <h2>Three ways your privacy usually leaks</h2>
+        <p>These aren't hypothetical. They're the everyday moments SecureVault AI is built to defuse.</p>
+      </div>
+
+      <div class="case-log">
+        <div class="case">
+          <span class="case-id mono">CASE&nbsp;VX-104</span>
+          <h3>Lost or stolen phone</h3>
+          <p class="risk"><b>Risk</b>Photos, IDs and passwords sit in plain reach of whoever picks it up.</p>
+          <p class="fix"><b>Fix</b>AES-256 encryption makes vault contents unreadable — even pulled apart physically.</p>
+        </div>
+        <div class="case">
+          <span class="case-id mono">CASE&nbsp;VX-207</span>
+          <h3>Lending your phone</h3>
+          <p class="risk"><b>Risk</b>A friend swipes one screen too far and lands on something private.</p>
+          <p class="fix"><b>Fix</b>The vault stays locked behind biometrics — or a believable decoy takes its place.</p>
+        </div>
+        <div class="case">
+          <span class="case-id mono">CASE&nbsp;VX-311</span>
+          <h3>One leaked password</h3>
+          <p class="risk"><b>Risk</b>The same password, reused everywhere, turns one breach into every breach.</p>
+          <p class="fix"><b>Fix</b>Unique, generated passwords stored locally, with a built-in health check.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARTMENTS / FEATURES ============ -->
+  <section id="compartments">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Inside the vault</span>
+        <h2>Four compartments. One key.</h2>
+        <p>Everything lives behind the same lock — your PIN or your fingerprint.</p>
+      </div>
+
+      <div class="compartments">
+        <div class="compartment">
+          <span class="icon">🔒</span>
+          <h3>Encrypted vault</h3>
+          <p>Photos, IDs and documents are detected, encrypted with AES-256 and stored locally — never uploaded.</p>
+        </div>
+        <div class="compartment">
+          <span class="icon">🔑</span>
+          <h3>Password manager</h3>
+          <p>Generate and store unique, strong passwords with a health check for weak, reused or aging logins.</p>
+        </div>
+        <div class="compartment">
+          <span class="icon">🎭</span>
+          <h3>Decoy vault</h3>
+          <p>Unlock a separate, believable vault under duress — your real data stays hidden and untouched.</p>
+        </div>
+        <div class="compartment">
+          <span class="icon">🛡️</span>
+          <h3>Security audit</h3>
+          <p>A device security score covering root detection, screen lock, biometrics and patch freshness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPEC PLATE ============ -->
+  <section id="specs">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Spec plate</span>
+        <h2>Built to never phone home</h2>
+        <p>No account, no server, no analytics pipeline for your vault data. Here's exactly what that means.</p>
+      </div>
+
+      <div class="spec-plate">
+        <div class="spec-row"><span class="k">Encryption</span><span class="v">AES-256-CBC, unique IV per item, key derived locally from your PIN</span></div>
+        <div class="spec-row"><span class="k">Network use</span><span class="v">None for vault, passwords or scans — 100% on-device</span></div>
+        <div class="spec-row"><span class="k">Cloud storage</span><span class="v">None. There is no server that holds your data</span></div>
+        <div class="spec-row"><span class="k">Sensitive-file detection</span><span class="v">On-device only — nothing is sent anywhere to be analyzed</span></div>
+        <div class="spec-row"><span class="k">Unlock methods</span><span class="v">PIN, and Face ID / fingerprint where available</span></div>
+        <div class="spec-row"><span class="k">Decoy vault</span><span class="v">A second, separate vault you can show under duress</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section id="stats">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why it matters</span>
+        <h2>The numbers behind the anxiety</h2>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="num">1 in 3</div>
+          <div class="cap">people experience some form of digital identity theft</div>
+        </div>
+        <div class="stat">
+          <div class="num">80%</div>
+          <div class="cap">of users reuse the same password across multiple accounts</div>
+        </div>
+        <div class="stat">
+          <div class="num">€100</div>
+          <div class="cap">is what a leaked photo of an ID card can sell for on the dark web</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section id="join" class="cta-band">
+    <div class="wrap">
+      <span class="eyebrow">Closed testing — Android</span>
+      <h2>Help us pressure-test the vault.</h2>
+      <p>SecureVault AI is currently in closed testing on Google Play. Request access below and we'll add you to the tester list.</p>
+      <div class="hero-ctas">
+        <!-- TODO: replace with your Play Console closed-testing opt-in link -->
+        <a href="#" class="btn btn-brass">Request Play Store access →</a>
+        <a href="mailto:hello@securevault.ai" class="btn btn-ghost">Contact us</a>
+      </div>
+      <div class="cta-note">No account needed to request access &middot; Android only, for now</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="copyright">© <span id="year"></span> SecureVault AI. Built to see nothing.</div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://github.com/SecreVaultAI" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:hello@securevault.ai">hello@securevault.ai</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Build 36 tick marks for the outer dial ring
+  (function() {
+    const g = document.getElementById('ticks');
+    const cx = 200, cy = 200, rOuter = 160, rInner = 148, rInnerMajor = 142;
+    for (let i = 0; i < 36; i++) {
+      const angle = (i / 36) * Math.PI * 2;
+      const major = i % 9 === 0;
+      const rIn = major ? rInnerMajor : rInner;
+      const x1 = cx + rOuter * Math.cos(angle);
+      const y1 = cy + rOuter * Math.sin(angle);
+      const x2 = cx + rIn * Math.cos(angle);
+      const y2 = cy + rIn * Math.sin(angle);
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', x1.toFixed(2));
+      line.setAttribute('y1', y1.toFixed(2));
+      line.setAttribute('x2', x2.toFixed(2));
+      line.setAttribute('y2', y2.toFixed(2));
+      line.setAttribute('opacity', major ? '0.9' : '0.35');
+      g.appendChild(line);
+    }
+  })();
+</script>
+
+</body>
+</html>
