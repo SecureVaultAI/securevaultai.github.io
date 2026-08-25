@@ -122,10 +122,12 @@ p { margin: 0; color: var(--ink-muted); }
   font-size: 17px;
   letter-spacing: -0.01em;
 }
-.brand img {
+.brand img,
+.brand-mark {
   width: 30px;
   height: 30px;
   border-radius: 7px;
+  flex-shrink: 0;
 }
 .brand small {
   display: block;
