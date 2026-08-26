@@ -26,12 +26,7 @@
 <header class="site-header">
   <div class="wrap">
     <a href="#top" class="brand">
-      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
-        <rect x="1" y="1" width="30" height="30" rx="7" fill="#1a2333" stroke="#c9a35f" stroke-width="1.4"/>
-        <path d="M11 14.5 V11.8 a5 5 0 0 1 10 0 v2.7" fill="none" stroke="#eef1f6" stroke-width="2" stroke-linecap="round"/>
-        <rect x="9.5" y="14.5" width="13" height="10.5" rx="2" fill="none" stroke="#eef1f6" stroke-width="2"/>
-        <circle cx="16" cy="19" r="1.6" fill="#c9a35f"/>
-      </svg>
+      <img src="adaptive-icon.png" alt="SecureVault AI" class="brand-mark">
       <span>SecureVault AI<small>PRIVACY&nbsp;GUARDIAN</small></span>
     </a>
     <nav class="primary-nav">
@@ -101,10 +96,15 @@
             <circle cx="130" cy="242" r="5" fill="#e6c688"/>
           </g>
 
-          <!-- static center lock -->
-          <circle cx="200" cy="200" r="34" fill="#121927" stroke="#eef1f6" stroke-width="1.5"/>
-          <path d="M188 198 v-10 a12 12 0 0 1 24 0 v10" fill="none" stroke="#eef1f6" stroke-width="2.5" stroke-linecap="round"/>
-          <rect x="183" y="198" width="34" height="22" rx="3" fill="#eef1f6"/>
+          <!-- center medallion: app icon -->
+          <defs>
+            <clipPath id="centerClip">
+              <circle cx="200" cy="200" r="33"/>
+            </clipPath>
+          </defs>
+          <image href="adaptive-icon.png" x="167" y="167" width="66" height="66"
+                 clip-path="url(#centerClip)" preserveAspectRatio="xMidYMid slice"/>
+          <circle cx="200" cy="200" r="34" fill="none" stroke="#eef1f6" stroke-width="1.5"/>
 
           <text x="200" y="46" text-anchor="middle" class="dial-label">Ø PRIVACY LOCK — MODEL SV-AI</text>
           <text x="200" y="362" text-anchor="middle" class="dial-label">SERIAL: 100% LOCAL · NO SYNC</text>
@@ -246,7 +246,7 @@
       <a href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener">Google Play</a>
       <a href="privacy.html">Privacy Policy</a>
       <a href="https://github.com/SecreVaultAI" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:securvaultai@securevault.ai">securevaultai@securevault.ai</a>
+      <a href="mailto:securevaultai@securevault.ai">securevaultai@securevault.ai</a>
     </div>
   </div>
 </footer>
