@@ -22,63 +22,25 @@
       <a class="nav-link" href="index.html#compartments">Features</a>
       <a class="nav-link" href="index.html#specs">Privacy</a>
     </nav>
-    <a class="btn btn-ghost" href="index.html">← Back to site</a>
+    <a class="btn btn-ghost" href="legal.html">← Legal Policies</a>
   </div>
 </header>
 
 <main class="doc">
-  <a href="index.html" class="back-link">← SecureVault AI</a>
-  <h1>Privacy Policy</h1>
-  <span class="updated mono">Last updated: <!-- TODO: set date --> [DD Month YYYY]</span>
+  <span class="doc-crumb"><a href="legal.html">Legal Policies</a> / <span id="crumbCurrent">Privacy Policy</span></span>
+  <h1 id="docTitle">Privacy Policy</h1>
+  <span class="updated mono"><span id="updatedLabel">Last Updated</span>: <span id="updatedDate"></span></span>
 
-  <p>SecureVault AI ("the app") is built around a simple rule: your data stays on your device. This policy explains, in plain terms, exactly what that means and what limited information is handled by third parties on our behalf (such as Google Play billing).</p>
+  <div class="doc-lang-bar">
+    <span class="lang-label" id="langLabel" style="margin-bottom:0;">Language</span>
+    <select id="langSelect" aria-label="Language"></select>
+  </div>
 
-  <h2>1. Data we do not collect</h2>
-  <p>SecureVault AI does not operate any server, database, or cloud storage for your content. We do not collect, transmit, or have access to:</p>
-  <ul>
-    <li>Files, photos, or documents you store in your vault</li>
-    <li>Passwords, usernames, or notes you save in the password manager</li>
-    <li>Your vault PIN, biometric data, or decoy vault contents</li>
-    <li>Results of on-device security scans</li>
-  </ul>
-  <p>All encryption and decryption (AES-256-CBC) happens locally on your device. Biometric authentication (Face ID / fingerprint) is handled entirely by your device's operating system — the app never receives or stores raw biometric data itself.</p>
+  <p id="docIntro"></p>
 
-  <h2>2. Information processed on your device only</h2>
-  <p>To provide its features, the app processes the following data <b>locally, on your device, only</b> — none of it is transmitted anywhere:</p>
-  <ul>
-    <li><b>Vault files</b> — encrypted and stored in the app's private storage area</li>
-    <li><b>Sensitive-document detection</b> — performed by an on-device process that scans file names/content you explicitly add, to suggest what belongs in the vault</li>
-    <li><b>Device security signals</b> — root/jailbreak status, screen-lock status, biometric availability and security patch date, used only to compute your on-device security score</li>
-  </ul>
+  <div id="docSections"></div>
 
-  <h2>3. Permissions we request, and why</h2>
-  <ul>
-    <li><b>Camera</b> — to let you photograph a document directly into the vault</li>
-    <li><b>Photos / storage</b> — to let you import existing files into the vault</li>
-    <li><b>Biometrics</b> — to unlock the app with Face ID / fingerprint instead of typing your PIN</li>
-    <li><b>Notifications</b> — for optional local reminders (e.g. weekly scan, monthly summary), generated on your device</li>
-  </ul>
-
-  <h2>4. Purchases and subscriptions</h2>
-  <p>Premium upgrades are processed entirely through Google Play Billing. We do not receive or store your payment details. Google's handling of payment data is governed by the <a class="inline-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. We locally record whether your device holds an active entitlement, so the app knows which features to unlock — this check happens on your device.</p>
-
-  <h2>5. App updates</h2>
-  <p>The app checks with the Google Play Store to see if a newer version is available (via Google Play's In-App Update API). This check only confirms version numbers — it does not involve your vault data.</p>
-
-  <h2>6. Data sharing</h2>
-  <p>We do not sell, rent, or share your data with third parties, advertisers, or analytics networks, because we do not collect it in the first place. There are no third-party analytics or advertising SDKs in SecureVault AI.</p>
-
-  <h2>7. Data deletion</h2>
-  <p>Because everything is stored only on your device, uninstalling the app — or resetting the vault from within Settings — permanently deletes all vault files, passwords, and app data. Nothing remains anywhere else, because nothing was ever sent anywhere else.</p>
-
-  <h2>8. Children's privacy</h2>
-  <p>SecureVault AI is not directed at children and is not intended for use by anyone under the age required by their local law to manage their own accounts and data.</p>
-
-  <h2>9. Changes to this policy</h2>
-  <p>If this policy changes, the updated version will be posted on this page with a new "Last updated" date. Continued use of the app after a change constitutes acceptance of the revised policy.</p>
-
-  <h2>10. Contact</h2>
-  <p>Questions about this policy or how SecureVault AI handles data can be sent to <a class="inline-link" href="mailto:hello@securevault.ai">hello@securevault.ai</a>.</p>
+  <p id="footerTag" style="margin-top: 36px; text-align:center; color: var(--ink-faint);"></p>
 </main>
 
 <footer>
@@ -86,10 +48,72 @@
     <div class="copyright">© <span id="year"></span> SecureVault AI.</div>
     <div class="footer-links">
       <a href="index.html">Home</a>
-      <a href="https://github.com/SecreVaultAI" target="_blank" rel="noopener">GitHub</a>
+      <a href="legal.html">Legal Policies</a>
+      <a href="https://github.com/SecureVaultAI" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<script src="legal-translations.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const LANGS = LEGAL_I18N.langs;
+  const NAMES = LEGAL_I18N.names;
+  const DATES = LEGAL_I18N.dates;
+  const DOC   = LEGAL_I18N.privacy;
+
+  const select = document.getElementById('langSelect');
+  LANGS.forEach(code => {
+    const opt = document.createElement('option');
+    opt.value = code;
+    opt.textContent = NAMES[code];
+    select.appendChild(opt);
+  });
+
+  function paramLang() {
+    const p = new URLSearchParams(window.location.search).get('lang');
+    return (p && LANGS.includes(p)) ? p : null;
+  }
+
+  function detectLang() {
+    return paramLang() || localStorage.getItem('svai_lang') ||
+      (LANGS.includes((navigator.language||'en').split('-')[0].toLowerCase())
+        ? (navigator.language||'en').split('-')[0].toLowerCase() : 'en');
+  }
+
+  function render(lang) {
+    const t = DOC[lang] || DOC.en;
+    localStorage.setItem('svai_lang', lang);
+    select.value = lang;
+    document.documentElement.lang = lang;
+    document.title = t.title + ' — SecureVault AI';
+
+    document.getElementById('docTitle').textContent = t.title;
+    document.getElementById('crumbCurrent').textContent = t.title;
+    document.getElementById('updatedLabel').textContent = t.updatedLabel;
+    document.getElementById('updatedDate').textContent = DATES[lang] || DATES.en;
+    document.getElementById('docIntro').textContent = t.intro;
+    document.getElementById('footerTag').textContent = t.footerTag || '';
+
+    const wrap = document.getElementById('docSections');
+    wrap.innerHTML = '';
+    t.sections.forEach(([heading, body]) => {
+      const h = document.createElement('h2');
+      h.textContent = heading;
+      const p = document.createElement('div');
+      p.innerHTML = body; // trusted, site-authored content
+      p.style.color = 'var(--ink-muted)';
+      p.style.fontSize = '15px';
+      p.style.lineHeight = '1.75';
+      wrap.appendChild(h);
+      wrap.appendChild(p);
+    });
+  }
+
+  select.addEventListener('change', () => render(select.value));
+  render(detectLang());
+</script>
+
 </body>
 </html>
