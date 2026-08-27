@@ -1068,7 +1068,7 @@ const LEGAL_I18N = {
         "note": "Android 7.0 and up · No account or sign-up required"
       },
       "footer": {
-        "tagline": "Built to see nothing.",
+        "tagline": "Your Digital Privacy Guardian.",
         "googlePlay": "Google Play",
         "legalPolicies": "Legal Policies",
         "github": "GitHub"
@@ -1202,7 +1202,7 @@ const LEGAL_I18N = {
         "note": "Android 7.0 et supérieur · Aucun compte ni inscription requis"
       },
       "footer": {
-        "tagline": "Conçu pour ne rien voir.",
+        "tagline": "Votre gardien de la vie privée numérique.",
         "googlePlay": "Google Play",
         "legalPolicies": "Mentions légales",
         "github": "GitHub"
@@ -1336,7 +1336,7 @@ const LEGAL_I18N = {
         "note": "Android 7.0 und höher · Kein Konto oder Registrierung erforderlich"
       },
       "footer": {
-        "tagline": "Entwickelt, um nichts zu sehen.",
+        "tagline": "Ihr Wächter für digitale Privatsphäre.",
         "googlePlay": "Google Play",
         "legalPolicies": "Rechtliches",
         "github": "GitHub"
@@ -1470,7 +1470,7 @@ const LEGAL_I18N = {
         "note": "Android 7.0 o superior · No se requiere cuenta ni registro"
       },
       "footer": {
-        "tagline": "Diseñada para no ver nada.",
+        "tagline": "Tu guardián de la privacidad digital.",
         "googlePlay": "Google Play",
         "legalPolicies": "Políticas legales",
         "github": "GitHub"
@@ -1604,7 +1604,7 @@ const LEGAL_I18N = {
         "note": "Android 7.0 e successivi · Nessun account o registrazione richiesti"
       },
       "footer": {
-        "tagline": "Progettata per non vedere nulla.",
+        "tagline": "Il tuo guardiano della privacy digitale.",
         "googlePlay": "Google Play",
         "legalPolicies": "Informazioni legali",
         "github": "GitHub"
@@ -1738,7 +1738,7 @@ const LEGAL_I18N = {
         "note": "Android 7.0 ou superior · Sem necessidade de conta ou registo"
       },
       "footer": {
-        "tagline": "Concebida para não ver nada.",
+        "tagline": "O seu guardião da privacidade digital.",
         "googlePlay": "Google Play",
         "legalPolicies": "Políticas legais",
         "github": "GitHub"
@@ -1872,7 +1872,7 @@ const LEGAL_I18N = {
         "note": "Android 7.0 以降 · アカウント登録は不要"
       },
       "footer": {
-        "tagline": "何も見ないために作られています。",
+        "tagline": "あなたのデジタルプライバシーの守護者。",
         "googlePlay": "Google Play",
         "legalPolicies": "法的ポリシー",
         "github": "GitHub"
@@ -2006,7 +2006,7 @@ const LEGAL_I18N = {
         "note": "Android 7.0 이상 · 계정이나 가입 불필요"
       },
       "footer": {
-        "tagline": "아무것도 보지 않도록 설계되었습니다.",
+        "tagline": "당신의 디지털 프라이버시 수호자.",
         "googlePlay": "Google Play",
         "legalPolicies": "법적 정책",
         "github": "GitHub"
@@ -2140,7 +2140,7 @@ const LEGAL_I18N = {
         "note": "Android 7.0 ve üzeri · Hesap veya kayıt gerekmez"
       },
       "footer": {
-        "tagline": "Hiçbir şey görmeyecek şekilde tasarlandı.",
+        "tagline": "Dijital Gizliliğinizin Bekçisi.",
         "googlePlay": "Google Play",
         "legalPolicies": "Yasal Politikalar",
         "github": "GitHub"
