@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal Policies — SecureVault AI</title>
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="adaptive-icon.png" alt="SecureVault AI" class="brand-mark">
+      <span>SecureVault AI<small>PRIVACY&nbsp;GUARDIAN</small></span>
+    </a>
+    <nav class="primary-nav">
+      <a class="nav-link" href="index.html#compartments">Features</a>
+      <a class="nav-link" href="index.html#specs">Privacy</a>
+    </nav>
+    <a class="btn btn-ghost" href="index.html">← Back to site</a>
+  </div>
+</header>
+
+<main class="legal-hub">
+  <span class="eyebrow" id="hubEyebrow">Legal</span>
+  <h1 id="hubTitle">SecureVault AI — Legal Policies</h1>
+  <p class="lede" id="hubLede">Please choose your language, then select a document to view.</p>
+
+  <div class="lang-label" id="langLabel">Choose your language</div>
+  <div class="lang-grid" id="langGrid" role="group" aria-label="Language"></div>
+
+  <div class="hub-buttons">
+    <a class="hub-card" id="privacyCard" href="privacy.html">
+      <span class="icon">🔒</span>
+      <h3 id="privacyTitle">Privacy Policy</h3>
+      <p id="privacyDesc">How SecureVault AI handles — and doesn't collect — your data.</p>
+      <span class="go" id="goPrivacy">Read document →</span>
+    </a>
+    <a class="hub-card" id="termsCard" href="terms.html">
+      <span class="icon">📄</span>
+      <h3 id="termsTitle">Terms of Service</h3>
+      <p id="termsDesc">The rules that govern your use of the app.</p>
+      <span class="go" id="goTerms">Read document →</span>
+    </a>
+  </div>
+
+  <p class="legal-note" id="hubNote">These documents are provided for informational purposes and govern your use of the SecureVault AI mobile application.</p>
+
+  <a href="index.html" class="back-link" id="hubBack">← Back to SecureVault AI</a>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="copyright">© <span id="year"></span> SecureVault AI.</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="https://github.com/SecureVaultAI" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="legal-translations.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const LANGS = LEGAL_I18N.langs;
+  const NAMES = LEGAL_I18N.names;
+  const HUB   = LEGAL_I18N.hub;
+
+  function detectLang() {
+    const stored = localStorage.getItem('svai_lang');
+    if (stored && LANGS.includes(stored)) return stored;
+    const nav = (navigator.language || 'en').split('-')[0].toLowerCase();
+    return LANGS.includes(nav) ? nav : 'en';
+  }
+
+  function setLang(lang) {
+    localStorage.setItem('svai_lang', lang);
+    const t = HUB[lang] || HUB.en;
+    document.getElementById('hubEyebrow').textContent  = t.eyebrow;
+    document.getElementById('hubTitle').textContent    = t.title;
+    document.getElementById('hubLede').textContent     = t.lede;
+    document.getElementById('langLabel').textContent   = t.langLabel;
+    document.getElementById('privacyTitle').textContent= t.privacyTitle;
+    document.getElementById('privacyDesc').textContent = t.privacyDesc;
+    document.getElementById('termsTitle').textContent  = t.termsTitle;
+    document.getElementById('termsDesc').textContent   = t.termsDesc;
+    document.getElementById('goPrivacy').textContent   = t.go;
+    document.getElementById('goTerms').textContent     = t.go;
+    document.getElementById('hubNote').textContent     = t.note;
+    document.getElementById('hubBack').textContent     = t.back;
+    document.title = t.title;
+    document.documentElement.lang = lang;
+
+    document.getElementById('privacyCard').href = 'privacy.html?lang=' + lang;
+    document.getElementById('termsCard').href   = 'terms.html?lang=' + lang;
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  const grid = document.getElementById('langGrid');
+  LANGS.forEach(code => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'lang-btn';
+    btn.dataset.lang = code;
+    btn.textContent = NAMES[code];
+    btn.addEventListener('click', () => setLang(code));
+    grid.appendChild(btn);
+  });
+
+  setLang(detectLang());
+</script>
+
+</body>
+</html>
