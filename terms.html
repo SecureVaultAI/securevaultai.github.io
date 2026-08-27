@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — SecureVault AI</title>
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="adaptive-icon.png" alt="SecureVault AI" class="brand-mark">
+      <span>SecureVault AI<small>PRIVACY&nbsp;GUARDIAN</small></span>
+    </a>
+    <nav class="primary-nav">
+      <a class="nav-link" href="index.html#compartments">Features</a>
+      <a class="nav-link" href="index.html#specs">Privacy</a>
+    </nav>
+    <a class="btn btn-ghost" href="legal.html">← Legal Policies</a>
+  </div>
+</header>
+
+<main class="doc">
+  <span class="doc-crumb"><a href="legal.html">Legal Policies</a> / <span id="crumbCurrent">Terms of Service</span></span>
+  <h1 id="docTitle">Terms of Service</h1>
+  <span class="updated mono"><span id="updatedLabel">Last Updated</span>: <span id="updatedDate"></span></span>
+
+  <div class="doc-lang-bar">
+    <span class="lang-label" id="langLabel" style="margin-bottom:0;">Language</span>
+    <select id="langSelect" aria-label="Language"></select>
+  </div>
+
+  <p id="docIntro"></p>
+
+  <div id="docSections"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="copyright">© <span id="year"></span> SecureVault AI.</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="legal.html">Legal Policies</a>
+      <a href="https://github.com/SecureVaultAI" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="legal-translations.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const LANGS = LEGAL_I18N.langs;
+  const NAMES = LEGAL_I18N.names;
+  const DATES = LEGAL_I18N.dates;
+  const DOC   = LEGAL_I18N.terms;
+
+  const select = document.getElementById('langSelect');
+  LANGS.forEach(code => {
+    const opt = document.createElement('option');
+    opt.value = code;
+    opt.textContent = NAMES[code];
+    select.appendChild(opt);
+  });
+
+  function paramLang() {
+    const p = new URLSearchParams(window.location.search).get('lang');
+    return (p && LANGS.includes(p)) ? p : null;
+  }
+
+  function detectLang() {
+    return paramLang() || localStorage.getItem('svai_lang') ||
+      (LANGS.includes((navigator.language||'en').split('-')[0].toLowerCase())
+        ? (navigator.language||'en').split('-')[0].toLowerCase() : 'en');
+  }
+
+  function render(lang) {
+    const t = DOC[lang] || DOC.en;
+    localStorage.setItem('svai_lang', lang);
+    select.value = lang;
+    document.documentElement.lang = lang;
+    document.title = t.title + ' — SecureVault AI';
+
+    document.getElementById('docTitle').textContent = t.title;
+    document.getElementById('crumbCurrent').textContent = t.title;
+    document.getElementById('updatedLabel').textContent = t.updatedLabel;
+    document.getElementById('updatedDate').textContent = DATES[lang] || DATES.en;
+    document.getElementById('docIntro').textContent = t.intro;
+
+    const wrap = document.getElementById('docSections');
+    wrap.innerHTML = '';
+    t.sections.forEach(([heading, body]) => {
+      const h = document.createElement('h2');
+      h.textContent = heading;
+      const p = document.createElement('div');
+      p.innerHTML = body; // trusted, site-authored content
+      p.style.color = 'var(--ink-muted)';
+      p.style.fontSize = '15px';
+      p.style.lineHeight = '1.75';
+      wrap.appendChild(h);
+      wrap.appendChild(p);
+    });
+  }
+
+  select.addEventListener('change', () => render(select.value));
+  render(detectLang());
+</script>
+
+</body>
+</html>
