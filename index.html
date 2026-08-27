@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<script src="legal-translations.js"></script>
 
 <!-- Open Graph -->
 <meta property="og:title" content="SecureVault AI — Your Digital Privacy Guardian">
@@ -30,14 +31,21 @@
       <span>SecureVault AI<small>PRIVACY&nbsp;GUARDIAN</small></span>
     </a>
     <nav class="primary-nav">
-      <a class="nav-link" href="#compartments">Features</a>
-      <a class="nav-link" href="#cases">Why it matters</a>
-      <a class="nav-link" href="#specs">Privacy</a>
-      <a class="nav-link" href="privacy.html">Policy</a>
+      <a class="nav-link" href="#compartments" data-i18n="nav.features">Features</a>
+      <a class="nav-link" href="#cases" data-i18n="nav.why">Why it matters</a>
+      <a class="nav-link" href="#specs" data-i18n="nav.privacy">Privacy</a>
+      <a class="nav-link" href="legal.html" data-i18n="nav.legal">Legal Policies</a>
     </nav>
-    <a class="btn btn-brass" href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener">Get it on Google Play</a>
+    <a class="btn btn-brass" href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener" data-i18n="ctaHeader">Get it on Google Play</a>
   </div>
 </header>
+
+<div class="lang-strip">
+  <div class="wrap lang-strip-inner">
+    <span class="lang-strip-label">🌐</span>
+    <div class="lang-grid-inline" id="siteLangGrid"></div>
+  </div>
+</div>
 
 <main id="top">
 
@@ -45,17 +53,17 @@
   <section class="hero" style="border-bottom:1px solid var(--line-soft); padding-top:88px;">
     <div class="wrap">
       <div>
-        <span class="eyebrow">100% Offline &middot; AES&#8209;256 &middot; No Cloud</span>
-        <h1>Your privacy,<br><em>locked in steel.</em></h1>
-        <p class="hero-sub">SecureVault AI is an encrypted vault, password manager and decoy vault that never touches the internet. Your documents, passwords and vault contents are encrypted and decrypted only on your device — nothing is ever uploaded, not even to us.</p>
+        <span class="eyebrow" data-i18n="hero.eyebrow">100% Offline &middot; AES&#8209;256 &middot; No Cloud</span>
+        <h1><span data-i18n="hero.title1">Your privacy,</span><br><em data-i18n="hero.titleEm">locked in steel.</em></h1>
+        <p class="hero-sub" data-i18n="hero.sub">SecureVault AI is an encrypted vault, password manager and decoy vault that never touches the internet. Your documents, passwords and vault contents are encrypted and decrypted only on your device — nothing is ever uploaded, not even to us.</p>
         <div class="hero-ctas">
-          <a href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener" class="btn btn-brass">Get it on Google Play →</a>
-          <a href="privacy.html" class="btn btn-ghost">Read the privacy policy</a>
+          <a href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener" class="btn btn-brass" data-i18n="hero.ctaPrimary">Get it on Google Play →</a>
+          <a href="legal.html" class="btn btn-ghost" data-i18n="hero.ctaGhost">Read our legal policies</a>
         </div>
         <div class="spec-tags">
-          <span class="spec-tag"><span class="dot"></span>AES-256-CBC local encryption</span>
-          <span class="spec-tag"><span class="dot"></span>Biometric / PIN lock</span>
-          <span class="spec-tag"><span class="dot"></span>Zero network permissions used for vault data</span>
+          <span class="spec-tag"><span class="dot"></span><span data-i18n="hero.spec1">AES-256-CBC local encryption</span></span>
+          <span class="spec-tag"><span class="dot"></span><span data-i18n="hero.spec2">Biometric / PIN lock</span></span>
+          <span class="spec-tag"><span class="dot"></span><span data-i18n="hero.spec3">Zero network permissions used for vault data</span></span>
         </div>
       </div>
 
@@ -117,29 +125,29 @@
   <section id="cases">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Case log</span>
-        <h2>Three ways your privacy usually leaks</h2>
-        <p>These aren't hypothetical. They're the everyday moments SecureVault AI is built to defuse.</p>
+        <span class="eyebrow" data-i18n="cases.eyebrow">Case log</span>
+        <h2 data-i18n="cases.h2">Three ways your privacy usually leaks</h2>
+        <p data-i18n="cases.lede">These aren't hypothetical. They're the everyday moments SecureVault AI is built to defuse.</p>
       </div>
 
       <div class="case-log">
         <div class="case">
           <span class="case-id mono">CASE&nbsp;VX-104</span>
-          <h3>Lost or stolen phone</h3>
-          <p class="risk"><b>Risk</b>Photos, IDs and passwords sit in plain reach of whoever picks it up.</p>
-          <p class="fix"><b>Fix</b>AES-256 encryption makes vault contents unreadable — even pulled apart physically.</p>
+          <h3 data-i18n="cases.items.0.title">Lost or stolen phone</h3>
+          <p class="risk"><b data-i18n="cases.items.0.riskLabel">Risk</b><span data-i18n="cases.items.0.risk">Photos, IDs and passwords sit in plain reach of whoever picks it up.</span></p>
+          <p class="fix"><b data-i18n="cases.items.0.fixLabel">Fix</b><span data-i18n="cases.items.0.fix">AES-256 encryption makes vault contents unreadable — even pulled apart physically.</span></p>
         </div>
         <div class="case">
           <span class="case-id mono">CASE&nbsp;VX-207</span>
-          <h3>Lending your phone</h3>
-          <p class="risk"><b>Risk</b>A friend swipes one screen too far and lands on something private.</p>
-          <p class="fix"><b>Fix</b>The vault stays locked behind biometrics — or a believable decoy takes its place.</p>
+          <h3 data-i18n="cases.items.1.title">Lending your phone</h3>
+          <p class="risk"><b data-i18n="cases.items.1.riskLabel">Risk</b><span data-i18n="cases.items.1.risk">A friend swipes one screen too far and lands on something private.</span></p>
+          <p class="fix"><b data-i18n="cases.items.1.fixLabel">Fix</b><span data-i18n="cases.items.1.fix">The vault stays locked behind biometrics — or a believable decoy takes its place.</span></p>
         </div>
         <div class="case">
           <span class="case-id mono">CASE&nbsp;VX-311</span>
-          <h3>One leaked password</h3>
-          <p class="risk"><b>Risk</b>The same password, reused everywhere, turns one breach into every breach.</p>
-          <p class="fix"><b>Fix</b>Unique, generated passwords stored locally, with a built-in health check.</p>
+          <h3 data-i18n="cases.items.2.title">One leaked password</h3>
+          <p class="risk"><b data-i18n="cases.items.2.riskLabel">Risk</b><span data-i18n="cases.items.2.risk">The same password, reused everywhere, turns one breach into every breach.</span></p>
+          <p class="fix"><b data-i18n="cases.items.2.fixLabel">Fix</b><span data-i18n="cases.items.2.fix">Unique, generated passwords stored locally, with a built-in health check.</span></p>
         </div>
       </div>
     </div>
@@ -149,31 +157,31 @@
   <section id="compartments">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Inside the vault</span>
-        <h2>Four compartments. One key.</h2>
-        <p>Everything lives behind the same lock — your PIN or your fingerprint.</p>
+        <span class="eyebrow" data-i18n="compartments.eyebrow">Inside the vault</span>
+        <h2 data-i18n="compartments.h2">Four compartments. One key.</h2>
+        <p data-i18n="compartments.lede">Everything lives behind the same lock — your PIN or your fingerprint.</p>
       </div>
 
       <div class="compartments">
         <div class="compartment">
           <span class="icon">🔒</span>
-          <h3>Encrypted vault</h3>
-          <p>Photos, IDs and documents are detected, encrypted with AES-256 and stored locally — never uploaded.</p>
+          <h3 data-i18n="compartments.items.0.title">Encrypted vault</h3>
+          <p data-i18n="compartments.items.0.desc">Photos, IDs and documents are detected, encrypted with AES-256 and stored locally — never uploaded.</p>
         </div>
         <div class="compartment">
           <span class="icon">🔑</span>
-          <h3>Password manager</h3>
-          <p>Generate and store unique, strong passwords with a health check for weak, reused or aging logins.</p>
+          <h3 data-i18n="compartments.items.1.title">Password manager</h3>
+          <p data-i18n="compartments.items.1.desc">Generate and store unique, strong passwords with a health check for weak, reused or aging logins.</p>
         </div>
         <div class="compartment">
           <span class="icon">🎭</span>
-          <h3>Decoy vault</h3>
-          <p>Unlock a separate, believable vault under duress — your real data stays hidden and untouched.</p>
+          <h3 data-i18n="compartments.items.2.title">Decoy vault</h3>
+          <p data-i18n="compartments.items.2.desc">Unlock a separate, believable vault under duress — your real data stays hidden and untouched.</p>
         </div>
         <div class="compartment">
           <span class="icon">🛡️</span>
-          <h3>Security audit</h3>
-          <p>A device security score covering root detection, screen lock, biometrics and patch freshness.</p>
+          <h3 data-i18n="compartments.items.3.title">Security audit</h3>
+          <p data-i18n="compartments.items.3.desc">A device security score covering root detection, screen lock, biometrics and patch freshness.</p>
         </div>
       </div>
     </div>
@@ -183,18 +191,18 @@
   <section id="specs">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Spec plate</span>
-        <h2>Built to never phone home</h2>
-        <p>No account, no server, no analytics pipeline for your vault data. Here's exactly what that means.</p>
+        <span class="eyebrow" data-i18n="specs.eyebrow">Spec plate</span>
+        <h2 data-i18n="specs.h2">Built to never phone home</h2>
+        <p data-i18n="specs.lede">No account, no server, no analytics pipeline for your vault data. Here's exactly what that means.</p>
       </div>
 
       <div class="spec-plate">
-        <div class="spec-row"><span class="k">Encryption</span><span class="v">AES-256-CBC, unique IV per item, key derived locally from your PIN</span></div>
-        <div class="spec-row"><span class="k">Network use</span><span class="v">None for vault, passwords or scans — 100% on-device</span></div>
-        <div class="spec-row"><span class="k">Cloud storage</span><span class="v">None. There is no server that holds your data</span></div>
-        <div class="spec-row"><span class="k">Sensitive-file detection</span><span class="v">On-device only — nothing is sent anywhere to be analyzed</span></div>
-        <div class="spec-row"><span class="k">Unlock methods</span><span class="v">PIN, and Face ID / fingerprint where available</span></div>
-        <div class="spec-row"><span class="k">Decoy vault</span><span class="v">A second, separate vault you can show under duress</span></div>
+        <div class="spec-row"><span class="k" data-i18n="specs.rows.0.k">Encryption</span><span class="v" data-i18n="specs.rows.0.v">AES-256-CBC, unique IV per item, key derived locally from your PIN</span></div>
+        <div class="spec-row"><span class="k" data-i18n="specs.rows.1.k">Network use</span><span class="v" data-i18n="specs.rows.1.v">None for vault, passwords or scans — 100% on-device</span></div>
+        <div class="spec-row"><span class="k" data-i18n="specs.rows.2.k">Cloud storage</span><span class="v" data-i18n="specs.rows.2.v">None. There is no server that holds your data</span></div>
+        <div class="spec-row"><span class="k" data-i18n="specs.rows.3.k">Sensitive-file detection</span><span class="v" data-i18n="specs.rows.3.v">On-device only — nothing is sent anywhere to be analyzed</span></div>
+        <div class="spec-row"><span class="k" data-i18n="specs.rows.4.k">Unlock methods</span><span class="v" data-i18n="specs.rows.4.v">PIN, and Face ID / fingerprint where available</span></div>
+        <div class="spec-row"><span class="k" data-i18n="specs.rows.5.k">Decoy vault</span><span class="v" data-i18n="specs.rows.5.v">A second, separate vault you can show under duress</span></div>
       </div>
     </div>
   </section>
@@ -203,21 +211,21 @@
   <section id="stats">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Why it matters</span>
-        <h2>The numbers behind the anxiety</h2>
+        <span class="eyebrow" data-i18n="stats.eyebrow">Why it matters</span>
+        <h2 data-i18n="stats.h2">The numbers behind the anxiety</h2>
       </div>
       <div class="stats">
         <div class="stat">
-          <div class="num">1 in 3</div>
-          <div class="cap">people experience some form of digital identity theft</div>
+          <div class="num" data-i18n="stats.items.0.num">1 in 3</div>
+          <div class="cap" data-i18n="stats.items.0.cap">people experience some form of digital identity theft</div>
         </div>
         <div class="stat">
-          <div class="num">80%</div>
-          <div class="cap">of users reuse the same password across multiple accounts</div>
+          <div class="num" data-i18n="stats.items.1.num">80%</div>
+          <div class="cap" data-i18n="stats.items.1.cap">of users reuse the same password across multiple accounts</div>
         </div>
         <div class="stat">
-          <div class="num">0</div>
-          <div class="cap">servers, trackers or accounts ever hold your data — it stays on your phone</div>
+          <div class="num" data-i18n="stats.items.2.num">0</div>
+          <div class="cap" data-i18n="stats.items.2.cap">servers, trackers or accounts ever hold your data — it stays on your phone</div>
         </div>
       </div>
     </div>
@@ -226,14 +234,14 @@
   <!-- ============ CTA ============ -->
   <section id="download" class="cta-band">
     <div class="wrap">
-      <span class="eyebrow">Live on Google Play — Android</span>
-      <h2>Lock it down today.</h2>
-      <p>SecureVault AI is free to download, with Premium available in-app for unlimited storage and passwords.</p>
+      <span class="eyebrow" data-i18n="cta.eyebrow">Live on Google Play — Android</span>
+      <h2 data-i18n="cta.h2">Lock it down today.</h2>
+      <p data-i18n="cta.p">SecureVault AI is free to download, with Premium available in-app for unlimited storage and passwords.</p>
       <div class="hero-ctas">
-        <a href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener" class="btn btn-brass">Get it on Google Play →</a>
-        <a href="mailto:hello@securevault.ai" class="btn btn-ghost">Contact us</a>
+        <a href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener" class="btn btn-brass" data-i18n="cta.primary">Get it on Google Play →</a>
+        <a href="mailto:securevaultai@gmail.com" class="btn btn-ghost" data-i18n="cta.ghost">Contact us</a>
       </div>
-      <div class="cta-note">Android 7.0 and up &middot; No account or sign-up required</div>
+      <div class="cta-note" data-i18n="cta.note">Android 7.0 and up &middot; No account or sign-up required</div>
     </div>
   </section>
 
@@ -241,12 +249,12 @@
 
 <footer>
   <div class="wrap">
-    <div class="copyright">© <span id="year"></span> SecureVault AI. Your Digital Privacy Guardian.</div>
+    <div class="copyright">© <span id="year"></span> SecureVault AI. <span data-i18n="footer.tagline">Built to see nothing.</span></div>
     <div class="footer-links">
-      <a href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener">Google Play</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="https://github.com/SecreVaultAI" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:securevaultai@securevault.ai">securevaultai@securevault.ai</a>
+      <a href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener" data-i18n="footer.googlePlay">Google Play</a>
+      <a href="legal.html" data-i18n="footer.legalPolicies">Legal Policies</a>
+      <a href="https://github.com/SecureVaultAI" target="_blank" rel="noopener" data-i18n="footer.github">GitHub</a>
+      <a href="mailto:securevaultai@gmail.com">securevaultai@gmail.com</a>
     </div>
   </div>
 </footer>
@@ -274,6 +282,57 @@
       line.setAttribute('opacity', major ? '0.9' : '0.35');
       g.appendChild(line);
     }
+  })();
+
+  // ---------------- Site-wide language switcher ----------------
+  // Same localStorage key ('svai_lang') is read/written by legal.html,
+  // privacy.html and terms.html, so a choice made on any page carries
+  // over automatically to every other page of the site.
+  (function() {
+    if (typeof LEGAL_I18N === 'undefined') {
+      console.error('legal-translations.js failed to load — language switching disabled.');
+      return;
+    }
+    const LANGS = LEGAL_I18N.langs;
+    const NAMES = LEGAL_I18N.names;
+    const SITE  = LEGAL_I18N.site;
+
+    function resolve(obj, path) {
+      return path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), obj);
+    }
+
+    function detectLang() {
+      const stored = localStorage.getItem('svai_lang');
+      if (stored && LANGS.includes(stored)) return stored;
+      const nav = (navigator.language || 'en').split('-')[0].toLowerCase();
+      return LANGS.includes(nav) ? nav : 'en';
+    }
+
+    function applyLang(lang) {
+      const dict = SITE[lang] || SITE.en;
+      localStorage.setItem('svai_lang', lang);
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const val = resolve(dict, el.getAttribute('data-i18n'));
+        if (val !== undefined) el.textContent = val;
+      });
+      document.querySelectorAll('.lang-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+    }
+
+    const grid = document.getElementById('siteLangGrid');
+    LANGS.forEach(code => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'lang-pill';
+      btn.dataset.lang = code;
+      btn.textContent = NAMES[code];
+      btn.addEventListener('click', () => applyLang(code));
+      grid.appendChild(btn);
+    });
+
+    applyLang(detectLang());
   })();
 </script>
 
