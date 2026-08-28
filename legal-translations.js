@@ -967,7 +967,7 @@ const LEGAL_I18N = {
           {
             "title": "Lost or stolen phone",
             "riskLabel": "Risk",
-            "risk": "Photos, IDs and passwords sit in plain reach of whoever picks it up.",
+            "risk": "Photos, videos, IDs, documents and passwords sit in plain reach of whoever picks it up.",
             "fixLabel": "Fix",
             "fix": "AES-256 encryption makes vault contents unreadable — even pulled apart physically."
           },
@@ -994,7 +994,7 @@ const LEGAL_I18N = {
         "items": [
           {
             "title": "Encrypted vault",
-            "desc": "Photos, IDs and documents are detected, encrypted with AES-256 and stored locally — never uploaded."
+            "desc": "Photos, videos, IDs and documents are detected, encrypted with AES-256 and stored locally — never uploaded."
           },
           {
             "title": "Password manager",
@@ -1101,7 +1101,7 @@ const LEGAL_I18N = {
           {
             "title": "Téléphone perdu ou volé",
             "riskLabel": "Risque",
-            "risk": "Photos, pièces d'identité et mots de passe sont à portée de main de qui le récupère.",
+            "risk": "Photos, Vidéos, pièces d'identité, documents et mots de passe sont à portée de main de qui le récupère.",
             "fixLabel": "Solution",
             "fix": "Le chiffrement AES-256 rend le contenu du coffre illisible — même démonté physiquement."
           },
@@ -1128,7 +1128,7 @@ const LEGAL_I18N = {
         "items": [
           {
             "title": "Coffre chiffré",
-            "desc": "Photos, pièces d'identité et documents sont détectés, chiffrés en AES-256 et stockés localement — jamais téléversés."
+            "desc": "Photos, Vidéos, pièces d'identité et documents sont détectés, chiffrés en AES-256 et stockés localement — jamais téléversés."
           },
           {
             "title": "Gestionnaire de mots de passe",
@@ -1235,7 +1235,7 @@ const LEGAL_I18N = {
           {
             "title": "Verlorenes oder gestohlenes Telefon",
             "riskLabel": "Risiko",
-            "risk": "Fotos, Ausweise und Passwörter liegen in Reichweite dessen, der es findet.",
+            "risk": "Fotos, Videos, Ausweise, Dokumente und Passwörter liegen in Reichweite dessen, der es findet.",
             "fixLabel": "Lösung",
             "fix": "AES-256-Verschlüsselung macht Tresorinhalte unlesbar — selbst physisch auseinandergenommen."
           },
@@ -1262,7 +1262,7 @@ const LEGAL_I18N = {
         "items": [
           {
             "title": "Verschlüsselter Tresor",
-            "desc": "Fotos, Ausweise und Dokumente werden erkannt, mit AES-256 verschlüsselt und lokal gespeichert — nie hochgeladen."
+            "desc": "Fotos, Videos, Ausweise und Dokumente werden erkannt, mit AES-256 verschlüsselt und lokal gespeichert — nie hochgeladen."
           },
           {
             "title": "Passwort-Manager",
@@ -1369,7 +1369,7 @@ const LEGAL_I18N = {
           {
             "title": "Teléfono perdido o robado",
             "riskLabel": "Riesgo",
-            "risk": "Fotos, documentos de identidad y contraseñas quedan al alcance de quien lo encuentre.",
+            "risk": "Fotos, vídeos, documentos de identidad, archivos y contraseñas quedan al alcance de quien lo encuentre.",
             "fixLabel": "Solución",
             "fix": "El cifrado AES-256 hace que el contenido de la caja fuerte sea ilegible — incluso desmontado físicamente."
           },
@@ -1396,7 +1396,7 @@ const LEGAL_I18N = {
         "items": [
           {
             "title": "Caja fuerte cifrada",
-            "desc": "Fotos, documentos de identidad y archivos se detectan, se cifran con AES-256 y se almacenan localmente — nunca se suben."
+            "desc": "Fotos, vídeos, documentos de identidad y archivos se detectan, se cifran con AES-256 y se almacenan localmente — nunca se suben."
           },
           {
             "title": "Gestor de contraseñas",
@@ -1503,7 +1503,7 @@ const LEGAL_I18N = {
           {
             "title": "Telefono perso o rubato",
             "riskLabel": "Rischio",
-            "risk": "Foto, documenti d'identità e password sono a portata di chiunque lo trovi.",
+            "risk": "Foto, video, documenti d'identità, file e password sono a portata di chiunque lo trovi.",
             "fixLabel": "Soluzione",
             "fix": "La crittografia AES-256 rende illeggibile il contenuto della cassaforte — anche smontato fisicamente."
           },
@@ -1530,7 +1530,7 @@ const LEGAL_I18N = {
         "items": [
           {
             "title": "Cassaforte cifrata",
-            "desc": "Foto, documenti d'identità e file vengono rilevati, cifrati con AES-256 e archiviati localmente — mai caricati."
+            "desc": "Foto, video, documenti d'identità e file vengono rilevati, cifrati con AES-256 e archiviati localmente — mai caricati."
           },
           {
             "title": "Gestore di password",
@@ -1637,7 +1637,7 @@ const LEGAL_I18N = {
           {
             "title": "Telemóvel perdido ou roubado",
             "riskLabel": "Risco",
-            "risk": "Fotos, documentos de identificação e palavras-passe ficam ao alcance de quem o encontrar.",
+            "risk": "Fotos, vídeos, documentos de identificação, ficheiros e palavras-passe ficam ao alcance de quem o encontrar.",
             "fixLabel": "Solução",
             "fix": "A encriptação AES-256 torna o conteúdo do cofre ilegível — mesmo desmontado fisicamente."
           },
@@ -1664,7 +1664,7 @@ const LEGAL_I18N = {
         "items": [
           {
             "title": "Cofre encriptado",
-            "desc": "Fotos, documentos de identificação e ficheiros são detetados, encriptados com AES-256 e guardados localmente — nunca enviados."
+            "desc": "Fotos, vídeos, documentos de identificação e ficheiros são detetados, encriptados com AES-256 e guardados localmente — nunca enviados."
           },
           {
             "title": "Gestor de palavras-passe",
@@ -1771,7 +1771,7 @@ const LEGAL_I18N = {
           {
             "title": "端末の紛失・盗難",
             "riskLabel": "リスク",
-            "risk": "写真、身分証明書、パスワードが、拾った人の手に渡ってしまいます。",
+            "risk": "写真、動画、身分証明書、書類、パスワードが、拾った人の手に渡ってしまいます。",
             "fixLabel": "対策",
             "fix": "AES-256 暗号化により、物理的に分解しても金庫の中身は読み取れません。"
           },
@@ -1798,7 +1798,7 @@ const LEGAL_I18N = {
         "items": [
           {
             "title": "暗号化された金庫",
-            "desc": "写真、身分証明書、書類を検出し、AES-256 で暗号化してローカルに保存——アップロードは一切しません。"
+            "desc": "写真、動画、身分証明書、書類を検出し、AES-256 で暗号化してローカルに保存——アップロードは一切しません。"
           },
           {
             "title": "パスワードマネージャー",
@@ -1905,7 +1905,7 @@ const LEGAL_I18N = {
           {
             "title": "기기 분실 또는 도난",
             "riskLabel": "위험",
-            "risk": "사진, 신분증, 비밀번호가 습득한 사람의 손에 그대로 노출됩니다.",
+            "risk": "사진, 동영상, 신분증, 문서, 비밀번호가 습득한 사람의 손에 그대로 노출됩니다.",
             "fixLabel": "해결책",
             "fix": "AES-256 암호화로 인해 물리적으로 분해해도 금고 내용을 읽을 수 없습니다."
           },
@@ -1932,7 +1932,7 @@ const LEGAL_I18N = {
         "items": [
           {
             "title": "암호화된 금고",
-            "desc": "사진, 신분증, 문서를 감지하여 AES-256으로 암호화하고 로컬에 저장합니다 — 업로드되는 일은 없습니다."
+            "desc": "사진, 동영상, 신분증, 문서를 감지하여 AES-256으로 암호화하고 로컬에 저장합니다 — 업로드되는 일은 없습니다."
           },
           {
             "title": "비밀번호 관리자",
@@ -2039,7 +2039,7 @@ const LEGAL_I18N = {
           {
             "title": "Kayıp veya çalıntı telefon",
             "riskLabel": "Risk",
-            "risk": "Fotoğraflar, kimlikler ve parolalar, telefonu bulan kişinin doğrudan erişimine açık kalır.",
+            "risk": "Fotoğraflar, videolar, kimlikler, belgeler ve parolalar, telefonu bulan kişinin doğrudan erişimine açık kalır.",
             "fixLabel": "Çözüm",
             "fix": "AES-256 şifreleme, fiziksel olarak sökülse bile kasa içeriğini okunamaz hale getirir."
           },
@@ -2066,7 +2066,7 @@ const LEGAL_I18N = {
         "items": [
           {
             "title": "Şifreli kasa",
-            "desc": "Fotoğraflar, kimlikler ve belgeler tespit edilir, AES-256 ile şifrelenir ve yerel olarak saklanır — asla yüklenmez."
+            "desc": "Fotoğraflar, videolar, kimlikler ve belgeler tespit edilir, AES-256 ile şifrelenir ve yerel olarak saklanır — asla yüklenmez."
           },
           {
             "title": "Parola yöneticisi",
