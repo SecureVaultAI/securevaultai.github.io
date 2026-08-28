@@ -58,7 +58,6 @@ html[data-theme="light"] {
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
 
 body {
@@ -346,6 +345,8 @@ nav.primary-nav a.nav-link:hover { color: var(--ink); }
 
 .splash-showcase {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin-top: 56px;
 }
@@ -411,8 +412,25 @@ nav.primary-nav a.nav-link:hover { color: var(--ink); }
   100% { opacity: 0; transform: translateY(-46px) scale(1.15); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .splash-float, .splash-rotate, .bubble { animation: none !important; }
+.splash-caption {
+  text-align: center;
+  margin-top: 8px;
+  position: relative;
+  z-index: 2;
+}
+.splash-brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.splash-tagline {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--brass);
+  margin-top: 6px;
 }
 
 /* ---------------- Section shell ---------------- */
