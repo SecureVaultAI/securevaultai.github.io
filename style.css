@@ -7,6 +7,7 @@
 
 :root {
   --bg:            #121927;
+  --bg-rgb:        18,25,39;
   --bg-panel:      #1a2333;
   --bg-panel-2:    #212c40;
   --line:          #2c384d;
@@ -31,6 +32,28 @@
   --radius: 3px;
 }
 
+/* Light theme — toggled via [data-theme="light"] on <html>. Dark (above) is
+   the default; nothing needs to change for dark mode to keep working. */
+html[data-theme="light"] {
+  --bg:            #f4f6f9;
+  --bg-rgb:        244,246,249;
+  --bg-panel:      #ffffff;
+  --bg-panel-2:    #eef1f5;
+  --line:          #d9dfe7;
+  --line-soft:     #e6eaf0;
+
+  --ink:           #16202f;
+  --ink-muted:     #55627a;
+  --ink-faint:     #8794a8;
+
+  --brass:         #b3873f;
+  --brass-bright:  #8a6526;
+  --signal:        #2f6fa8;
+  --signal-dim:    #cfe0f0;
+  --alert:         #b23b30;
+  --ok:            #16a34a;
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
@@ -49,6 +72,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 ::selection { background: var(--brass); color: #12141a; }
@@ -148,8 +172,9 @@ p { margin: 0; color: var(--ink-muted); }
   top: 0;
   z-index: 50;
   backdrop-filter: blur(10px);
-  background: rgba(18, 25, 39, 0.82);
+  background: rgba(var(--bg-rgb), 0.82);
   border-bottom: 1px solid var(--line-soft);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 .site-header .wrap {
   display: flex;
@@ -181,6 +206,12 @@ p { margin: 0; color: var(--ink-muted); }
   letter-spacing: 0.08em;
   color: var(--ink-faint);
   margin-top: 1px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 nav.primary-nav {
@@ -220,6 +251,23 @@ nav.primary-nav a.nav-link:hover { color: var(--ink); }
   color: var(--ink);
 }
 .btn-ghost:hover { border-color: var(--signal); color: var(--signal); }
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--bg-panel);
+  color: var(--ink);
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+.theme-toggle:hover { border-color: var(--brass); transform: translateY(-1px); }
 
 /* ---------------- Hero ---------------- */
 
