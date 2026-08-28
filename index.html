@@ -15,6 +15,11 @@
 
 <link rel="stylesheet" href="style.css">
 <script src="legal-translations.js"></script>
+<script>
+  (function() {
+    document.documentElement.setAttribute('data-theme', localStorage.getItem('svai_theme') || 'dark');
+  })();
+</script>
 
 <!-- Open Graph -->
 <meta property="og:title" content="SecureVault AI — Your Digital Privacy Guardian">
@@ -36,7 +41,10 @@
       <a class="nav-link" href="#specs" data-i18n="nav.privacy">Privacy</a>
       <a class="nav-link" href="legal.html" data-i18n="nav.legal">Legal Policies</a>
     </nav>
-    <a class="btn btn-brass" href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener" data-i18n="ctaHeader">Get it on Google Play</a>
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark / light mode">🌙</button>
+      <a class="btn btn-brass" href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener" data-i18n="ctaHeader">Get it on Google Play</a>
+    </div>
   </div>
 </header>
 
@@ -333,6 +341,21 @@
     });
 
     applyLang(detectLang());
+  })();
+
+  // ---------------- Dark / light theme toggle ----------------
+  (function() {
+    const btn = document.getElementById('themeToggle');
+    const icon = t => t === 'light' ? '☀️' : '🌙';
+    const current = () => document.documentElement.getAttribute('data-theme') || 'dark';
+
+    btn.textContent = icon(current());
+    btn.addEventListener('click', () => {
+      const next = current() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('svai_theme', next);
+      btn.textContent = icon(next);
+    });
   })();
 </script>
 
