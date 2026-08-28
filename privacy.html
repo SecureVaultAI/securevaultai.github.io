@@ -9,6 +9,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+  (function() {
+    document.documentElement.setAttribute('data-theme', localStorage.getItem('svai_theme') || 'dark');
+  })();
+</script>
 </head>
 <body>
 
@@ -22,7 +27,10 @@
       <a class="nav-link" href="index.html#compartments">Features</a>
       <a class="nav-link" href="index.html#specs">Privacy</a>
     </nav>
-    <a class="btn btn-ghost" href="legal.html">← Legal Policies</a>
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark / light mode">🌙</button>
+      <a class="btn btn-ghost" href="legal.html">← Legal Policies</a>
+    </div>
   </div>
 </header>
 
@@ -113,6 +121,21 @@
 
   select.addEventListener('change', () => render(select.value));
   render(detectLang());
+
+  // ---------------- Dark / light theme toggle ----------------
+  (function() {
+    const btn = document.getElementById('themeToggle');
+    const icon = t => t === 'light' ? '☀️' : '🌙';
+    const current = () => document.documentElement.getAttribute('data-theme') || 'dark';
+
+    btn.textContent = icon(current());
+    btn.addEventListener('click', () => {
+      const next = current() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('svai_theme', next);
+      btn.textContent = icon(next);
+    });
+  })();
 </script>
 
 </body>
