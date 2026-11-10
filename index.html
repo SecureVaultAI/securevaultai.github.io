@@ -44,7 +44,14 @@
  .site-header .nav-offer{padding:6px 12px}
  .site-header .header-actions{margin-left:auto}
 }
-@media(max-width:700px){.site-header .header-actions .btn{display:none}}
+@media(max-width:700px){
+ .site-header .nav-link:not(.nav-offer){display:none}
+ .site-header .header-actions{display:contents}
+ .site-header .theme-toggle{order:3;margin-left:auto}
+ .site-header .primary-nav{order:4;flex:1 1 0;min-width:0;overflow:visible}
+ .site-header .nav-offer{flex:1;text-align:center;padding:11px 8px;font-size:14px;white-space:normal;line-height:1.2}
+ .site-header .header-actions .btn{order:5;flex:1 1 0;min-width:0;text-align:center;padding:11px 8px;font-size:13px;white-space:normal;line-height:1.2}
+}
 @media(max-width:560px){
  .site-header .brand small{display:none}
  .site-header .lang-select{max-width:112px;padding:8px 26px 8px 10px;font-size:13px;background-position:right 9px center}
