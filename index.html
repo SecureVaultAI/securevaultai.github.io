@@ -42,13 +42,20 @@
 @media(max-width:560px){.site-header .header-actions .btn{padding-inline:12px;font-size:13px}.site-header .brand small{display:none}}
 
 
+.lang-select{appearance:none;-webkit-appearance:none;flex:none;cursor:pointer;padding:9px 34px 9px 16px;border-radius:12px;border:1px solid #d9dfeb;color:#141b2b;font:500 15px 'Inter',sans-serif;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23141b2b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 14px center}
+[data-theme="dark"] .lang-select{background-color:#1a2333;border-color:#2c384d;color:#eef1f6;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23eef1f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E")}
+[data-theme="dark"] .lang-select option{background:#1a2333;color:#eef1f6}
+.lang-select:hover,.lang-select:focus-visible{border-color:#c9a35f;outline:0;box-shadow:0 0 0 3px rgba(201,163,95,.25)}
+@media(max-width:560px){.lang-select{padding:8px 30px 8px 12px;font-size:14px}}
+
 /* ===== Tighter section spacing (desktop/tablet only — mobile untouched) ===== */
 @media(min-width:901px){
- :root{--section-gap:56px}
- main>section{padding-top:var(--section-gap)!important;padding-bottom:var(--section-gap)!important}
- main>section.hero{padding-top:88px!important}
- main>section .section-head{margin-bottom:32px!important}
- .offer-card{margin-top:0!important}
+ :root{--section-gap:40px}
+ html body main>section{padding-top:var(--section-gap)!important;padding-bottom:var(--section-gap)!important;margin-top:0!important;margin-bottom:0!important;min-height:0!important}
+ html body main>section>.wrap{padding-top:0!important;padding-bottom:0!important}
+ html body main>section.hero{padding-top:48px!important}
+ html body main>section .section-head{margin-bottom:28px!important}
+ html body main>section .offer-card{margin-top:0!important}
 }
 
 /* ===== Lifetime offer ===== */
@@ -86,6 +93,7 @@ html[lang="ar"] .offer-card{direction:rtl}
       <img src="adaptive-icon.png" alt="SecureVault AI" class="brand-mark">
       <span>SecureVault AI<small>PRIVACY&nbsp;GUARDIAN</small></span>
     </a>
+    <select id="siteLang" class="lang-select" aria-label="Language"></select>
     <nav class="primary-nav">
       <a class="nav-link" href="#compartments" data-i18n="nav.features">Features</a>
       <a class="nav-link" href="#cases" data-i18n="nav.why">Why it matters</a>
@@ -99,17 +107,10 @@ html[lang="ar"] .offer-card{direction:rtl}
   </div>
 </header>
 
-<div class="lang-strip">
-  <div class="wrap lang-strip-inner">
-    <span class="lang-strip-label">🌐</span>
-    <div class="lang-grid-inline" id="siteLangGrid"></div>
-  </div>
-</div>
-
 <main id="top">
 
   <!-- ============ HERO ============ -->
-  <section class="hero" style="border-bottom:1px solid var(--line-soft); padding-top:88px;">
+  <section class="hero" style="border-bottom:1px solid var(--line-soft); padding-top:48px;">
     <div class="wrap">
       <div>
         <span class="eyebrow" data-i18n="hero.eyebrow">100% Offline &middot; AES&#8209;256 &middot; No Cloud</span>
@@ -430,21 +431,17 @@ html[lang="ar"] .offer-card{direction:rtl}
         const val = resolve(dict, el.getAttribute('data-i18n'));
         if (val !== undefined) el.textContent = val;
       });
-      document.querySelectorAll('.lang-pill').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-      });
+      sel.value = lang;
     }
 
-    const grid = document.getElementById('siteLangGrid');
+    const sel = document.getElementById('siteLang');
     LANGS.forEach(code => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'lang-pill';
-      btn.dataset.lang = code;
-      btn.textContent = NAMES[code];
-      btn.addEventListener('click', () => applyLang(code));
-      grid.appendChild(btn);
+      const o = document.createElement('option');
+      o.value = code;
+      o.textContent = NAMES[code];
+      sel.appendChild(o);
     });
+    sel.addEventListener('change', () => applyLang(sel.value));
 
     applyLang(detectLang());
   })();
