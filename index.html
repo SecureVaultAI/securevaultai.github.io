@@ -26,14 +26,58 @@
 <meta property="og:description" content="100% offline vault, password manager & decoy vault. AES-256. No cloud, ever.">
 <meta property="og:image" content="logo.png">
 <meta property="og:type" content="website">
+
+<style>
+/* ===== Header: Byrsa Team | nav | brand | Google Play | theme ===== */
+.site-header>.wrap{display:flex;align-items:center;gap:18px}
+.site-header .primary-nav{display:flex;align-items:center;gap:6px;margin:0 0 0 auto}
+.site-header .header-actions{display:flex;align-items:center;gap:12px;margin:0}
+.site-header .brand{flex:none}
+.byrsa-btn{display:inline-flex;align-items:center;gap:10px;padding:7px 18px 7px 8px;border-radius:999px;border:1px solid #d9dfeb;background:#fff;color:#0e1420;font:600 14px/1 'Space Grotesk',sans-serif;text-decoration:none;white-space:nowrap;transition:border-color .2s,box-shadow .2s}
+[data-theme="dark"] .byrsa-btn{background:#1a2333;border-color:#2c384d;color:#eef1f6}
+.byrsa-btn:hover,.byrsa-btn:focus-visible{border-color:#c9a35f;box-shadow:0 0 0 3px rgba(201,163,95,.25);outline:0}
+.byrsa-btn svg{width:26px;height:26px;flex:none}
+@media(max-width:900px){
+ .site-header>.wrap{flex-wrap:wrap;justify-content:space-between;row-gap:10px}
+ .site-header .primary-nav{order:5;width:100%;justify-content:center;flex-wrap:wrap;margin:0}
+ .site-header .brand{margin-left:auto}
+}
+@media(max-width:560px){.site-header .header-actions .btn{padding-inline:12px;font-size:13px}.site-header .brand small{display:none}}
+
+/* ===== Lifetime offer ===== */
+.offer{--o-card:#151e2f;--o-in:#1b2539;--o-line:#2c384d;--o-text:#eef1f6;--o-mut:#9db0c8;--o-brass:#c9a35f;--o-brass2:#e6c688;--o-warn:#2a2213;--o-warnl:#6b5428}
+[data-theme="light"] .offer{--o-card:#fff;--o-in:#f3f5fa;--o-line:#d9dfeb;--o-text:#141b2b;--o-mut:#58647a;--o-brass:#b8892f;--o-brass2:#8f6a1f;--o-warn:#fff6e0;--o-warnl:#e3c986}
+.offer-card{position:relative;display:grid;grid-template-columns:1fr 1.1fr;gap:0;margin-top:40px;border:1px solid var(--o-brass);border-radius:18px;background:var(--o-card);color:var(--o-text);box-shadow:0 24px 60px -30px rgba(201,163,95,.45);overflow:hidden}
+.offer-card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,transparent,var(--o-brass2),transparent)}
+.offer-main{padding:44px 40px;border-right:1px dashed var(--o-line);display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.offer-badge{font:500 12px 'JetBrains Mono',monospace;color:var(--o-brass2);border:1px solid var(--o-brass);border-radius:999px;padding:5px 12px;background:rgba(201,163,95,.1)}
+.offer-title{font:700 28px/1.15 'Space Grotesk',sans-serif;margin:4px 0 0}
+.offer-price{display:flex;align-items:baseline;gap:12px}
+.offer-price .amt{font:700 64px/1 'Space Grotesk',sans-serif;color:var(--o-brass2);letter-spacing:-1px}
+.offer-price .per{font:500 16px 'Inter',sans-serif;color:var(--o-mut)}
+.offer-pills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.offer-pills li{font:500 13px 'Inter',sans-serif;padding:6px 12px;border-radius:8px;background:var(--o-in);border:1px solid var(--o-line)}
+.offer-tag{margin:0;font:600 17px 'Inter',sans-serif}
+.offer-note{font:400 13px 'Inter',sans-serif;color:var(--o-mut)}
+.offer-side{padding:44px 40px;display:flex;flex-direction:column;gap:26px;background:var(--o-in)}
+.offer-feats,.offer-steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;font:400 15px/1.45 'Inter',sans-serif}
+.offer-feats li{display:flex;gap:12px;align-items:flex-start}
+.offer-feats li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:var(--o-brass);color:#101826;font:700 13px/22px 'Inter',sans-serif;text-align:center}
+.offer-steps{counter-reset:s;padding-top:22px;border-top:1px dashed var(--o-line);color:var(--o-mut)}
+.offer-steps li{counter-increment:s;display:flex;gap:12px;align-items:baseline}
+.offer-steps li::before{content:counter(s);flex:none;font:500 13px 'JetBrains Mono',monospace;color:var(--o-brass2);width:22px}
+.offer-alert{grid-column:1/-1;display:flex;gap:12px;align-items:flex-start;padding:18px 40px;background:var(--o-warn);border-top:1px solid var(--o-warnl);font:400 14px/1.5 'Inter',sans-serif}
+@media(max-width:820px){.offer-card{grid-template-columns:1fr}.offer-main{border-right:0;border-bottom:1px dashed var(--o-line)}.offer-main,.offer-side{padding:32px 24px}.offer-alert{padding:16px 24px}.offer-price .amt{font-size:52px}}
+html[lang="ar"] .offer-card{direction:rtl}
+</style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a href="#top" class="brand">
-      <img src="adaptive-icon.png" alt="SecureVault AI" class="brand-mark">
-      <span>SecureVault AI<small>PRIVACY&nbsp;GUARDIAN</small></span>
+    <a href="https://byrsateam.github.io/" class="byrsa-btn" target="_blank" rel="noopener" title="Byrsa Team — main website">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="8" fill="#0e1420"/><path d="M13 5l6 2.3v5.2c0 3.6-2.4 6.2-6 8-3.6-1.8-6-4.4-6-8V7.3L13 5z" fill="none" stroke="#c9a35f" stroke-width="1.6" stroke-linejoin="round"/><rect x="10.3" y="11.2" width="5.4" height="4.4" rx="1" fill="#e6c688"/><path d="M11.4 11.2V10a1.6 1.6 0 013.2 0v1.2" fill="none" stroke="#e6c688" stroke-width="1.3"/></svg>
+      Byrsa Team
     </a>
     <nav class="primary-nav">
       <a class="nav-link" href="#compartments" data-i18n="nav.features">Features</a>
@@ -41,9 +85,13 @@
       <a class="nav-link" href="#specs" data-i18n="nav.privacy">Privacy</a>
       <a class="nav-link" href="legal.html" data-i18n="nav.legal">Legal Policies</a>
     </nav>
+    <a href="#top" class="brand">
+      <img src="adaptive-icon.png" alt="SecureVault AI" class="brand-mark">
+      <span>SecureVault AI<small>PRIVACY&nbsp;GUARDIAN</small></span>
+    </a>
     <div class="header-actions">
-      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark / light mode">🌙</button>
       <a class="btn btn-brass" href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener" data-i18n="ctaHeader">Get it on Google Play</a>
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark / light mode">🌙</button>
     </div>
   </div>
 </header>
@@ -239,6 +287,42 @@
     </div>
   </section>
 
+  <!-- ============ LIFETIME OFFER ============ -->
+  <section id="premium" class="offer">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="offer.eyebrow">Premium &middot; Launch wave</span>
+        <h2 data-i18n="offer.h2">Pay once. Keep it forever.</h2>
+        <p data-i18n="offer.lede">One purchase unlocks unlimited storage and unlimited passwords in SecureVault AI — no subscription, no renewal.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-main">
+          <span class="offer-badge" data-i18n="offer.badge">Limited &middot; Best value</span>
+          <h3 class="offer-title"><span aria-hidden="true">💎</span> <span data-i18n="offer.title">Limited Lifetime Premium</span></h3>
+          <div class="offer-price"><span class="amt">$44.99</span><span class="per" data-i18n="offer.per">one-time</span></div>
+          <ul class="offer-pills"><li data-i18n="offer.pill1">No subscriptions</li><li data-i18n="offer.pill2">Best value</li></ul>
+          <p class="offer-tag" data-i18n="offer.tag">Pay once. Unlimited forever.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener" class="btn btn-brass" data-i18n="offer.cta">Get it on Google Play →</a>
+          <span class="offer-note" data-i18n="offer.note">Purchased from the in-app Premium screen.</span>
+        </div>
+        <div class="offer-side">
+          <ul class="offer-feats">
+            <li data-i18n="offer.f1">Unlimited storage in the encrypted vault</li>
+            <li data-i18n="offer.f2">Unlimited passwords in the password manager</li>
+            <li data-i18n="offer.f3">One payment — nothing to renew, ever</li>
+            <li data-i18n="offer.f4">Secure purchase through Google Play</li>
+          </ul>
+          <ol class="offer-steps">
+            <li data-i18n="offer.s1">Install SecureVault AI from Google Play</li>
+            <li data-i18n="offer.s2">Open the Premium screen inside the app</li>
+            <li data-i18n="offer.s3">Buy once with Google Play</li>
+          </ol>
+        </div>
+        <div class="offer-alert"><span aria-hidden="true">⚠️</span><span data-i18n="offer.alert">Available in restricted quantities per launch wave. It can sell out and reopen later. Find it on the in-app Premium screen (Google Play purchase).</span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CTA ============ -->
   <section id="download" class="cta-band">
     <div class="wrap">
@@ -279,6 +363,7 @@
     <div class="footer-links">
       <a href="https://play.google.com/store/apps/details?id=com.securevault.ai" target="_blank" rel="noopener" data-i18n="footer.googlePlay">Google Play</a>
       <a href="legal.html" data-i18n="footer.legalPolicies">Legal Policies</a>
+      <a href="https://byrsateam.github.io/" target="_blank" rel="noopener">Byrsa Team</a>
       <a href="https://github.com/SecureVaultAI" target="_blank" rel="noopener" data-i18n="footer.github">GitHub</a>
       <a href="mailto:securevaultai@gmail.com">securevaultai@gmail.com</a>
     </div>
@@ -374,6 +459,25 @@
       localStorage.setItem('svai_theme', next);
       btn.textContent = icon(next);
     });
+  })();
+</script>
+
+<script>
+  // Offer section translations (falls back to the English text in the HTML)
+  (function() {
+    const T = {
+      fr: {eyebrow:"Premium · Vague de lancement",h2:"Payez une fois. Gardez-le pour toujours.",lede:"Un seul achat débloque le stockage et les mots de passe illimités de SecureVault AI — sans abonnement, sans renouvellement.",badge:"Édition limitée · Meilleure offre",title:"Premium à vie — édition limitée",per:"paiement unique",pill1:"Sans abonnement",pill2:"Meilleur rapport qualité-prix",tag:"Payez une fois. Illimité pour toujours.",cta:"Obtenir sur Google Play →",note:"Achat depuis l'écran Premium de l'application.",f1:"Stockage illimité dans le coffre chiffré",f2:"Mots de passe illimités dans le gestionnaire",f3:"Un seul paiement — rien à renouveler, jamais",f4:"Achat sécurisé via Google Play",s1:"Installez SecureVault AI depuis Google Play",s2:"Ouvrez l'écran Premium dans l'application",s3:"Achetez une seule fois avec Google Play",alert:"Disponible en quantités limitées à chaque vague de lancement. L'offre peut s'épuiser puis rouvrir plus tard. Retrouvez-la sur l'écran Premium de l'application (achat via Google Play)."},
+      ar: {eyebrow:"بريميوم · موجة الإطلاق",h2:"ادفع مرة واحدة. واحتفظ به إلى الأبد.",lede:"عملية شراء واحدة تفتح لك تخزينًا وكلمات مرور غير محدودة في SecureVault AI — بدون اشتراك وبدون تجديد.",badge:"كمية محدودة · أفضل قيمة",title:"بريميوم مدى الحياة — إصدار محدود",per:"دفعة واحدة",pill1:"بدون اشتراكات",pill2:"أفضل قيمة",tag:"ادفع مرة واحدة. بلا حدود إلى الأبد.",cta:"احصل عليه من Google Play ←",note:"الشراء من شاشة Premium داخل التطبيق.",f1:"تخزين غير محدود في الخزنة المشفّرة",f2:"كلمات مرور غير محدودة",f3:"دفعة واحدة — لا تجديد أبدًا",f4:"شراء آمن عبر Google Play",s1:"ثبّت SecureVault AI من Google Play",s2:"افتح شاشة Premium داخل التطبيق",s3:"اشترِ مرة واحدة عبر Google Play",alert:"متوفر بكميات محدودة في كل موجة إطلاق. قد ينفد العرض ثم يُعاد فتحه لاحقًا. ستجده في شاشة Premium داخل التطبيق (الشراء عبر Google Play)."}
+    };
+    const els = [...document.querySelectorAll('[data-i18n^="offer."]')];
+    const EN = {};
+    els.forEach(e => EN[e.dataset.i18n] = e.textContent);
+    const apply = () => {
+      const d = T[document.documentElement.lang] || {};
+      els.forEach(e => { const k = e.dataset.i18n; e.textContent = d[k.slice(6)] ?? EN[k]; });
+    };
+    apply();
+    new MutationObserver(apply).observe(document.documentElement, {attributes:true, attributeFilter:['lang']});
   })();
 </script>
 
