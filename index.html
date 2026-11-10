@@ -36,12 +36,19 @@
 .site-header .nav-offer{color:#c9a35f;font-weight:600;border:1px solid rgba(201,163,95,.55);border-radius:999px;padding:6px 14px}
 .site-header .nav-offer:hover{background:rgba(201,163,95,.12)}
 @media(max-width:900px){
- .site-header>.wrap{flex-wrap:wrap;justify-content:space-between;row-gap:10px}
- .site-header .primary-nav{order:5;width:100%;justify-content:center;flex-wrap:wrap;margin:0}
+ html body .site-header{position:sticky!important;top:0;height:auto!important;min-height:0!important;z-index:50}
+ .site-header>.wrap{height:auto!important;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:8px 10px;padding-top:10px;padding-bottom:10px}
+ .site-header .primary-nav{order:5;flex:0 0 100%;margin:0;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;gap:4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .site-header .primary-nav::-webkit-scrollbar{display:none}
+ .site-header .nav-link{white-space:nowrap;font-size:14px;padding:6px 10px;flex:none}
+ .site-header .nav-offer{padding:6px 12px}
+ .site-header .header-actions{margin-left:auto}
 }
-@media(max-width:560px){.site-header .header-actions .btn{padding-inline:12px;font-size:13px}.site-header .brand small{display:none}}
-
-
+@media(max-width:700px){.site-header .header-actions .btn{display:none}}
+@media(max-width:560px){
+ .site-header .brand small{display:none}
+ .site-header .lang-select{max-width:112px;padding:8px 26px 8px 10px;font-size:13px;background-position:right 9px center}
+}
 .lang-select{appearance:none;-webkit-appearance:none;flex:none;cursor:pointer;padding:9px 34px 9px 16px;border-radius:12px;border:1px solid #d9dfeb;color:#141b2b;font:500 15px 'Inter',sans-serif;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23141b2b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 14px center}
 [data-theme="dark"] .lang-select{background-color:#1a2333;border-color:#2c384d;color:#eef1f6;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23eef1f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E")}
 [data-theme="dark"] .lang-select option{background:#1a2333;color:#eef1f6}
