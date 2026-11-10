@@ -41,6 +41,16 @@
 }
 @media(max-width:560px){.site-header .header-actions .btn{padding-inline:12px;font-size:13px}.site-header .brand small{display:none}}
 
+
+/* ===== Tighter section spacing (desktop/tablet only — mobile untouched) ===== */
+@media(min-width:901px){
+ :root{--section-gap:56px}
+ main>section{padding-top:var(--section-gap)!important;padding-bottom:var(--section-gap)!important}
+ main>section.hero{padding-top:88px!important}
+ main>section .section-head{margin-bottom:32px!important}
+ .offer-card{margin-top:0!important}
+}
+
 /* ===== Lifetime offer ===== */
 .offer{--o-card:#151e2f;--o-in:#1b2539;--o-line:#2c384d;--o-text:#eef1f6;--o-mut:#9db0c8;--o-brass:#c9a35f;--o-brass2:#e6c688;--o-warn:#2a2213;--o-warnl:#6b5428}
 [data-theme="light"] .offer{--o-card:#fff;--o-in:#f3f5fa;--o-line:#d9dfeb;--o-text:#141b2b;--o-mut:#58647a;--o-brass:#b8892f;--o-brass2:#8f6a1f;--o-warn:#fff6e0;--o-warnl:#e3c986}
