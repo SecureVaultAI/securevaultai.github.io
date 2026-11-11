@@ -275,7 +275,7 @@ html[lang="ar"] .offer-card{direction:rtl}
         <div class="spec-row"><span class="k" data-i18n="specs.rows.1.k">Network use</span><span class="v" data-i18n="specs.rows.1.v">None for vault, passwords or scans — 100% on-device</span></div>
         <div class="spec-row"><span class="k" data-i18n="specs.rows.2.k">Cloud storage</span><span class="v" data-i18n="specs.rows.2.v">None. There is no server that holds your data</span></div>
         <div class="spec-row"><span class="k" data-i18n="specs.rows.3.k">Sensitive-file detection</span><span class="v" data-i18n="specs.rows.3.v">On-device only — nothing is sent anywhere to be analyzed</span></div>
-        <div class="spec-row"><span class="k" data-i18n="specs.rows.4.k">Unlock methods</span><span class="v" data-i18n="specs.rows.4.v">PIN, and Face ID / fingerprint where available</span></div>
+        <div class="spec-row"><span class="k" data-i18n="specs.rows.4.k">Unlock methods</span><span class="v" data-i18n="specs.rows.4.v">PIN, and face unlock / fingerprint where available</span></div>
         <div class="spec-row"><span class="k" data-i18n="specs.rows.5.k">Decoy vault</span><span class="v" data-i18n="specs.rows.5.v">A second, separate vault you can show under duress</span></div>
       </div>
     </div>
@@ -430,16 +430,26 @@ html[lang="ar"] .offer-card{direction:rtl}
       return path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), obj);
     }
 
+    // 1) language manually chosen by the visitor  2) device/browser languages, in order of preference  3) English
     function detectLang() {
-      const stored = localStorage.getItem('svai_lang');
-      if (stored && LANGS.includes(stored)) return stored;
-      const nav = (navigator.language || 'en').split('-')[0].toLowerCase();
-      return LANGS.includes(nav) ? nav : 'en';
+      try {
+        const stored = localStorage.getItem('svai_lang');
+        if (stored && LANGS.includes(stored)) return stored;
+      } catch (e) {}
+      const prefs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || 'en'];
+      const lower = LANGS.map(l => l.toLowerCase());
+      for (const p of prefs) {
+        const full = String(p).toLowerCase();
+        let i = lower.indexOf(full);
+        if (i < 0) i = lower.indexOf(full.split('-')[0]);
+        if (i >= 0) return LANGS[i];
+      }
+      return 'en';
     }
 
-    function applyLang(lang) {
+    function applyLang(lang, persist) {
       const dict = SITE[lang] || SITE.en;
-      localStorage.setItem('svai_lang', lang);
+      if (persist) { try { localStorage.setItem('svai_lang', lang); } catch (e) {} }
       document.documentElement.lang = lang;
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const val = resolve(dict, el.getAttribute('data-i18n'));
@@ -455,7 +465,7 @@ html[lang="ar"] .offer-card{direction:rtl}
       o.textContent = NAMES[code];
       sel.appendChild(o);
     });
-    sel.addEventListener('change', () => applyLang(sel.value));
+    sel.addEventListener('change', () => applyLang(sel.value, true));
 
     applyLang(detectLang());
   })();
@@ -473,25 +483,6 @@ html[lang="ar"] .offer-card{direction:rtl}
       localStorage.setItem('svai_theme', next);
       btn.textContent = icon(next);
     });
-  })();
-</script>
-
-<script>
-  // Offer section translations (falls back to the English text in the HTML)
-  (function() {
-    const T = {
-      fr: {nav:"Offre limitée",eyebrow:"Premium · Vague de lancement",h2:"Payez une fois. Gardez-le pour toujours.",lede:"Un seul achat débloque le stockage et les mots de passe illimités de SecureVault AI — sans abonnement, sans renouvellement.",badge:"Édition limitée · Meilleure offre",title:"Premium à vie — édition limitée",per:"paiement unique",pill1:"Sans abonnement",pill2:"Meilleur rapport qualité-prix",tag:"Payez une fois. Illimité pour toujours.",cta:"Obtenir sur Google Play →",note:"Achat depuis l'écran Premium de l'application.",f1:"Stockage illimité dans le coffre chiffré",f2:"Mots de passe illimités dans le gestionnaire",f3:"Un seul paiement — rien à renouveler, jamais",f4:"Achat sécurisé via Google Play",s1:"Installez SecureVault AI depuis Google Play",s2:"Ouvrez l'écran Premium dans l'application",s3:"Achetez une seule fois avec Google Play",alert:"Disponible en quantités limitées à chaque vague de lancement. L'offre peut s'épuiser puis rouvrir plus tard. Retrouvez-la sur l'écran Premium de l'application (achat via Google Play)."},
-      ar: {nav:"عرض لفترة محدودة",eyebrow:"بريميوم · موجة الإطلاق",h2:"ادفع مرة واحدة. واحتفظ به إلى الأبد.",lede:"عملية شراء واحدة تفتح لك تخزينًا وكلمات مرور غير محدودة في SecureVault AI — بدون اشتراك وبدون تجديد.",badge:"كمية محدودة · أفضل قيمة",title:"بريميوم مدى الحياة — إصدار محدود",per:"دفعة واحدة",pill1:"بدون اشتراكات",pill2:"أفضل قيمة",tag:"ادفع مرة واحدة. بلا حدود إلى الأبد.",cta:"احصل عليه من Google Play ←",note:"الشراء من شاشة Premium داخل التطبيق.",f1:"تخزين غير محدود في الخزنة المشفّرة",f2:"كلمات مرور غير محدودة",f3:"دفعة واحدة — لا تجديد أبدًا",f4:"شراء آمن عبر Google Play",s1:"ثبّت SecureVault AI من Google Play",s2:"افتح شاشة Premium داخل التطبيق",s3:"اشترِ مرة واحدة عبر Google Play",alert:"متوفر بكميات محدودة في كل موجة إطلاق. قد ينفد العرض ثم يُعاد فتحه لاحقًا. ستجده في شاشة Premium داخل التطبيق (الشراء عبر Google Play)."}
-    };
-    const els = [...document.querySelectorAll('[data-i18n^="offer."]')];
-    const EN = {};
-    els.forEach(e => EN[e.dataset.i18n] = e.textContent);
-    const apply = () => {
-      const d = T[document.documentElement.lang] || {};
-      els.forEach(e => { const k = e.dataset.i18n; e.textContent = d[k.slice(6)] ?? EN[k]; });
-    };
-    apply();
-    new MutationObserver(apply).observe(document.documentElement, {attributes:true, attributeFilter:['lang']});
   })();
 </script>
 
