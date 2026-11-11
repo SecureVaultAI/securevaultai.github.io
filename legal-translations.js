@@ -1033,7 +1033,7 @@ const LEGAL_I18N = {
           },
           {
             "k": "Unlock methods",
-            "v": "PIN, and Face ID / fingerprint where available"
+            "v": "PIN, and face unlock / fingerprint where available"
           },
           {
             "k": "Decoy vault",
@@ -1072,6 +1072,28 @@ const LEGAL_I18N = {
         "googlePlay": "Google Play",
         "legalPolicies": "Legal Policies",
         "github": "GitHub"
+      },
+      "offer": {
+        "nav": "Limited Time Offer",
+        "eyebrow": "Premium · Launch wave",
+        "h2": "Pay once. Keep it forever.",
+        "lede": "One purchase unlocks unlimited storage and unlimited passwords in SecureVault AI — no subscription, no renewal.",
+        "badge": "Limited · Best value",
+        "title": "Limited Lifetime Premium",
+        "per": "one-time",
+        "pill1": "No subscriptions",
+        "pill2": "Best value",
+        "tag": "Pay once. Unlimited forever.",
+        "cta": "Get it on Google Play →",
+        "note": "Purchased from the in-app Premium screen.",
+        "f1": "Unlimited storage in the encrypted vault",
+        "f2": "Unlimited passwords in the password manager",
+        "f3": "One payment — nothing to renew, ever",
+        "f4": "Secure purchase through Google Play",
+        "s1": "Install SecureVault AI from Google Play",
+        "s2": "Open the Premium screen inside the app",
+        "s3": "Buy once with Google Play",
+        "alert": "Available in restricted quantities per launch wave. It can sell out and reopen later. Find it on the in-app Premium screen (Google Play purchase)."
       }
     },
     "fr": {
@@ -1167,7 +1189,7 @@ const LEGAL_I18N = {
           },
           {
             "k": "Méthodes de déverrouillage",
-            "v": "Code PIN, et Face ID / empreinte digitale si disponibles"
+            "v": "Code PIN, et déverrouillage facial / empreinte digitale si disponibles"
           },
           {
             "k": "Coffre leurre",
@@ -1206,6 +1228,28 @@ const LEGAL_I18N = {
         "googlePlay": "Google Play",
         "legalPolicies": "Mentions légales",
         "github": "GitHub"
+      },
+      "offer": {
+        "nav": "Offre limitée",
+        "eyebrow": "Premium · Vague de lancement",
+        "h2": "Payez une fois. Gardez-le pour toujours.",
+        "lede": "Un seul achat débloque le stockage et les mots de passe illimités de SecureVault AI — sans abonnement, sans renouvellement.",
+        "badge": "Édition limitée · Meilleure offre",
+        "title": "Premium à vie — édition limitée",
+        "per": "paiement unique",
+        "pill1": "Sans abonnement",
+        "pill2": "Meilleur rapport qualité-prix",
+        "tag": "Payez une fois. Illimité pour toujours.",
+        "cta": "Obtenir sur Google Play →",
+        "note": "Achat depuis l'écran Premium de l'application.",
+        "f1": "Stockage illimité dans le coffre chiffré",
+        "f2": "Mots de passe illimités dans le gestionnaire",
+        "f3": "Un seul paiement — rien à renouveler, jamais",
+        "f4": "Achat sécurisé via Google Play",
+        "s1": "Installez SecureVault AI depuis Google Play",
+        "s2": "Ouvrez l'écran Premium dans l'application",
+        "s3": "Achetez une seule fois avec Google Play",
+        "alert": "Disponible en quantités limitées à chaque vague de lancement. L'offre peut s'épuiser puis rouvrir plus tard. Retrouvez-la sur l'écran Premium de l'application (achat via Google Play)."
       }
     },
     "de": {
@@ -1301,7 +1345,7 @@ const LEGAL_I18N = {
           },
           {
             "k": "Entsperrmethoden",
-            "v": "PIN sowie Face ID / Fingerabdruck, falls verfügbar"
+            "v": "PIN sowie Gesichtsentsperrung / Fingerabdruck, falls verfügbar"
           },
           {
             "k": "Täuschungs-Tresor",
@@ -1340,6 +1384,28 @@ const LEGAL_I18N = {
         "googlePlay": "Google Play",
         "legalPolicies": "Rechtliches",
         "github": "GitHub"
+      },
+      "offer": {
+        "nav": "Zeitlich begrenztes Angebot",
+        "eyebrow": "Premium · Startwelle",
+        "h2": "Einmal zahlen. Für immer behalten.",
+        "lede": "Ein einziger Kauf schaltet unbegrenzten Speicher und unbegrenzte Passwörter in SecureVault AI frei – ohne Abo, ohne Verlängerung.",
+        "badge": "Limitiert · Bestes Angebot",
+        "title": "Lifetime Premium – limitierte Auflage",
+        "per": "einmalig",
+        "pill1": "Keine Abonnements",
+        "pill2": "Bester Wert",
+        "tag": "Einmal zahlen. Für immer unbegrenzt.",
+        "cta": "Bei Google Play holen →",
+        "note": "Kauf über den Premium-Bildschirm in der App.",
+        "f1": "Unbegrenzter Speicher im verschlüsselten Tresor",
+        "f2": "Unbegrenzte Passwörter im Passwort-Manager",
+        "f3": "Eine Zahlung – nie wieder verlängern",
+        "f4": "Sicherer Kauf über Google Play",
+        "s1": "SecureVault AI bei Google Play installieren",
+        "s2": "Den Premium-Bildschirm in der App öffnen",
+        "s3": "Einmalig über Google Play kaufen",
+        "alert": "In begrenzter Stückzahl pro Startwelle verfügbar. Das Angebot kann ausverkauft sein und später wieder öffnen. Zu finden auf dem Premium-Bildschirm in der App (Kauf über Google Play)."
       }
     },
     "es": {
@@ -1435,7 +1501,7 @@ const LEGAL_I18N = {
           },
           {
             "k": "Métodos de desbloqueo",
-            "v": "PIN, y Face ID / huella dactilar cuando estén disponibles"
+            "v": "PIN, y desbloqueo facial / huella dactilar cuando estén disponibles"
           },
           {
             "k": "Caja fuerte señuelo",
@@ -1474,6 +1540,28 @@ const LEGAL_I18N = {
         "googlePlay": "Google Play",
         "legalPolicies": "Políticas legales",
         "github": "GitHub"
+      },
+      "offer": {
+        "nav": "Oferta por tiempo limitado",
+        "eyebrow": "Premium · Oleada de lanzamiento",
+        "h2": "Paga una vez. Quédatelo para siempre.",
+        "lede": "Una sola compra desbloquea almacenamiento y contraseñas ilimitados en SecureVault AI, sin suscripción ni renovación.",
+        "badge": "Limitado · Mejor valor",
+        "title": "Premium de por vida — edición limitada",
+        "per": "pago único",
+        "pill1": "Sin suscripciones",
+        "pill2": "Mejor valor",
+        "tag": "Paga una vez. Ilimitado para siempre.",
+        "cta": "Consíguela en Google Play →",
+        "note": "Se compra desde la pantalla Premium de la app.",
+        "f1": "Almacenamiento ilimitado en la bóveda cifrada",
+        "f2": "Contraseñas ilimitadas en el gestor",
+        "f3": "Un solo pago: nada que renovar, nunca",
+        "f4": "Compra segura a través de Google Play",
+        "s1": "Instala SecureVault AI desde Google Play",
+        "s2": "Abre la pantalla Premium dentro de la app",
+        "s3": "Compra una sola vez con Google Play",
+        "alert": "Disponible en cantidades limitadas en cada oleada de lanzamiento. Puede agotarse y reabrirse más adelante. Búscala en la pantalla Premium de la app (compra a través de Google Play)."
       }
     },
     "it": {
@@ -1569,7 +1657,7 @@ const LEGAL_I18N = {
           },
           {
             "k": "Metodi di sblocco",
-            "v": "PIN, e Face ID / impronta digitale dove disponibili"
+            "v": "PIN, e sblocco con il volto / impronta digitale dove disponibili"
           },
           {
             "k": "Cassaforte esca",
@@ -1608,6 +1696,28 @@ const LEGAL_I18N = {
         "googlePlay": "Google Play",
         "legalPolicies": "Informazioni legali",
         "github": "GitHub"
+      },
+      "offer": {
+        "nav": "Offerta a tempo limitato",
+        "eyebrow": "Premium · Ondata di lancio",
+        "h2": "Paghi una volta. Tuo per sempre.",
+        "lede": "Un solo acquisto sblocca archiviazione e password illimitate in SecureVault AI, senza abbonamenti né rinnovi.",
+        "badge": "Limitato · Miglior valore",
+        "title": "Premium a vita — edizione limitata",
+        "per": "pagamento unico",
+        "pill1": "Nessun abbonamento",
+        "pill2": "Miglior valore",
+        "tag": "Paghi una volta. Illimitato per sempre.",
+        "cta": "Scaricala su Google Play →",
+        "note": "Si acquista dalla schermata Premium nell'app.",
+        "f1": "Spazio illimitato nel vault cifrato",
+        "f2": "Password illimitate nel gestore",
+        "f3": "Un solo pagamento: niente da rinnovare, mai",
+        "f4": "Acquisto sicuro tramite Google Play",
+        "s1": "Installa SecureVault AI da Google Play",
+        "s2": "Apri la schermata Premium nell'app",
+        "s3": "Acquista una sola volta con Google Play",
+        "alert": "Disponibile in quantità limitate a ogni ondata di lancio. Può esaurirsi e riaprire più avanti. La trovi nella schermata Premium dell'app (acquisto tramite Google Play)."
       }
     },
     "pt": {
@@ -1703,7 +1813,7 @@ const LEGAL_I18N = {
           },
           {
             "k": "Métodos de desbloqueio",
-            "v": "PIN, e Face ID / impressão digital quando disponíveis"
+            "v": "PIN, e desbloqueio facial / impressão digital quando disponíveis"
           },
           {
             "k": "Cofre-isco",
@@ -1742,6 +1852,28 @@ const LEGAL_I18N = {
         "googlePlay": "Google Play",
         "legalPolicies": "Políticas legais",
         "github": "GitHub"
+      },
+      "offer": {
+        "nav": "Oferta por tempo limitado",
+        "eyebrow": "Premium · Onda de lançamento",
+        "h2": "Pague uma vez. Fique com ele para sempre.",
+        "lede": "Uma única compra desbloqueia armazenamento e palavras-passe ilimitados no SecureVault AI, sem subscrição nem renovação.",
+        "badge": "Limitado · Melhor valor",
+        "title": "Premium vitalício — edição limitada",
+        "per": "pagamento único",
+        "pill1": "Sem subscrições",
+        "pill2": "Melhor valor",
+        "tag": "Pague uma vez. Ilimitado para sempre.",
+        "cta": "Obter no Google Play →",
+        "note": "Comprado no ecrã Premium da aplicação.",
+        "f1": "Armazenamento ilimitado no cofre encriptado",
+        "f2": "Palavras-passe ilimitadas no gestor",
+        "f3": "Um único pagamento: nada para renovar, nunca",
+        "f4": "Compra segura através do Google Play",
+        "s1": "Instale o SecureVault AI a partir do Google Play",
+        "s2": "Abra o ecrã Premium dentro da aplicação",
+        "s3": "Compre uma única vez com o Google Play",
+        "alert": "Disponível em quantidades limitadas em cada onda de lançamento. Pode esgotar e reabrir mais tarde. Encontre-o no ecrã Premium da aplicação (compra através do Google Play)."
       }
     },
     "ja": {
@@ -1837,7 +1969,7 @@ const LEGAL_I18N = {
           },
           {
             "k": "ロック解除方法",
-            "v": "PIN、および利用可能な場合は Face ID / 指紋認証"
+            "v": "PIN、および利用可能な場合は顔認証 / 指紋認証"
           },
           {
             "k": "デコイ金庫",
@@ -1876,6 +2008,28 @@ const LEGAL_I18N = {
         "googlePlay": "Google Play",
         "legalPolicies": "法的ポリシー",
         "github": "GitHub"
+      },
+      "offer": {
+        "nav": "期間限定オファー",
+        "eyebrow": "プレミアム · ローンチウェーブ",
+        "h2": "一度の支払いで、ずっと使える。",
+        "lede": "一度の購入で、SecureVault AI のストレージとパスワードが無制限に。サブスクリプションも更新もありません。",
+        "badge": "数量限定 · 最もお得",
+        "title": "数量限定 ライフタイム・プレミアム",
+        "per": "1回払い",
+        "pill1": "サブスクなし",
+        "pill2": "最もお得",
+        "tag": "一度払えば、ずっと無制限。",
+        "cta": "Google Play で入手 →",
+        "note": "アプリ内のプレミアム画面から購入できます。",
+        "f1": "暗号化された保管庫を容量無制限で利用",
+        "f2": "パスワードマネージャーを無制限で利用",
+        "f3": "支払いは一度だけ。更新は不要",
+        "f4": "Google Play による安全な購入",
+        "s1": "Google Play から SecureVault AI をインストール",
+        "s2": "アプリ内のプレミアム画面を開く",
+        "s3": "Google Play で一度だけ購入",
+        "alert": "ローンチウェーブごとに数量限定で提供されます。売り切れた後、再開されることがあります。アプリ内のプレミアム画面でご確認ください（Google Play での購入）。"
       }
     },
     "ko": {
@@ -1971,7 +2125,7 @@ const LEGAL_I18N = {
           },
           {
             "k": "잠금 해제 방법",
-            "v": "PIN, 그리고 가능한 경우 Face ID / 지문 인식"
+            "v": "PIN, 그리고 가능한 경우 얼굴 인식 / 지문 인식"
           },
           {
             "k": "디코이 금고",
@@ -2010,6 +2164,28 @@ const LEGAL_I18N = {
         "googlePlay": "Google Play",
         "legalPolicies": "법적 정책",
         "github": "GitHub"
+      },
+      "offer": {
+        "nav": "기간 한정 혜택",
+        "eyebrow": "프리미엄 · 런치 웨이브",
+        "h2": "한 번만 결제하세요. 평생 사용하세요.",
+        "lede": "한 번의 구매로 SecureVault AI의 저장 공간과 비밀번호를 무제한으로 이용하세요. 구독도, 갱신도 없습니다.",
+        "badge": "수량 한정 · 최고의 가치",
+        "title": "한정 평생 프리미엄",
+        "per": "1회 결제",
+        "pill1": "구독 없음",
+        "pill2": "최고의 가치",
+        "tag": "한 번 결제하면 평생 무제한.",
+        "cta": "Google Play에서 받기 →",
+        "note": "앱 내 프리미엄 화면에서 구매할 수 있습니다.",
+        "f1": "암호화된 보관함 저장 공간 무제한",
+        "f2": "비밀번호 관리자 무제한",
+        "f3": "결제는 한 번뿐, 갱신 불필요",
+        "f4": "Google Play를 통한 안전한 구매",
+        "s1": "Google Play에서 SecureVault AI 설치",
+        "s2": "앱 안에서 프리미엄 화면 열기",
+        "s3": "Google Play로 한 번만 구매",
+        "alert": "런치 웨이브마다 한정 수량으로 제공됩니다. 품절된 뒤 나중에 다시 열릴 수 있습니다. 앱 내 프리미엄 화면에서 확인하세요(Google Play 결제)."
       }
     },
     "tr": {
@@ -2105,7 +2281,7 @@ const LEGAL_I18N = {
           },
           {
             "k": "Kilit açma yöntemleri",
-            "v": "PIN ve mevcutsa Face ID / parmak izi"
+            "v": "PIN ve mevcutsa yüz tanıma / parmak izi"
           },
           {
             "k": "Sahte kasa",
@@ -2144,6 +2320,28 @@ const LEGAL_I18N = {
         "googlePlay": "Google Play",
         "legalPolicies": "Yasal Politikalar",
         "github": "GitHub"
+      },
+      "offer": {
+        "nav": "Sınırlı Süreli Teklif",
+        "eyebrow": "Premium · Lansman dalgası",
+        "h2": "Bir kez öde. Ömür boyu sahip ol.",
+        "lede": "Tek bir satın alma, SecureVault AI'da sınırsız depolama ve sınırsız parola açar; abonelik yok, yenileme yok.",
+        "badge": "Sınırlı · En iyi değer",
+        "title": "Sınırlı Ömür Boyu Premium",
+        "per": "tek seferlik",
+        "pill1": "Abonelik yok",
+        "pill2": "En iyi değer",
+        "tag": "Bir kez öde. Sonsuza dek sınırsız.",
+        "cta": "Google Play'den edinin →",
+        "note": "Uygulamadaki Premium ekranından satın alınır.",
+        "f1": "Şifreli kasada sınırsız depolama",
+        "f2": "Parola yöneticisinde sınırsız parola",
+        "f3": "Tek ödeme: yenilenecek hiçbir şey yok",
+        "f4": "Google Play ile güvenli satın alma",
+        "s1": "SecureVault AI'ı Google Play'den yükleyin",
+        "s2": "Uygulama içindeki Premium ekranını açın",
+        "s3": "Google Play ile bir kez satın alın",
+        "alert": "Her lansman dalgasında sınırlı miktarda sunulur. Tükenebilir ve daha sonra yeniden açılabilir. Uygulamadaki Premium ekranında bulabilirsiniz (Google Play satın alımı)."
       }
     }
   }
